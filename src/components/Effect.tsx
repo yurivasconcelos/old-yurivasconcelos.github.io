@@ -4,7 +4,7 @@ type EffectComponentProps = {
   name: string;
 };
 
-export function EffectComponent(props: EffectComponentProps) {
+export function Effect(props: EffectComponentProps) {
   const [count, setCount] = useState(0);
 
   useEffect(() => {

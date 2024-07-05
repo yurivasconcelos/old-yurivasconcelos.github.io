@@ -38,10 +38,10 @@ jobs:
           node-version: '18'
   
       - name: Install dependencies
-        run: yarn start
+        run: yarn
   
       - name: Build Vite project
-        run: yarn build
+        run: npm run build
 
       - name: Build with Jekyll
         uses: actions/jekyll-build-pages@v1

@@ -34,7 +34,7 @@ jobs:
       run: npm run build
 
     - name: Yuri Tests
-      run: echo ${{ secrets.GITHUB_TOKEN }}
+      run: echo Starting the pipeline
 
     - name: Deploy to GitHub Pages
       uses: peaceiris/actions-gh-pages@v3

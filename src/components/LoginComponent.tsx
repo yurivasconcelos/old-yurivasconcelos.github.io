@@ -1,10 +1,10 @@
 import React from 'react';
 
-type SignInComponentProps = {
+type LoginComponentProps = {
   // Define your component props here
 };
 
-const SignInComponent: React.FC<SignInComponentProps> = () => {
+const LoginComponent: React.FC<LoginComponentProps> = () => {
   return (
     <div className='w-full p-4 bg-white border border-gray-200 rounded-lg shadow sm:p-6 md:p-8 dark:bg-gray-800 dark:border-gray-700'>
       <form className='space-y-6' action='#'>
@@ -70,4 +70,4 @@ const SignInComponent: React.FC<SignInComponentProps> = () => {
   );
 };
 
-export default SignInComponent;
+export default LoginComponent;

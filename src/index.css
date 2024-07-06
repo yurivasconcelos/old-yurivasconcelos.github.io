@@ -2,6 +2,8 @@
 @tailwind components;
 @tailwind utilities;
 
+/* THIS VERSION IS WORKING ON MOBILE WIDTH AND HEIGHT */
+
 html {
   overflow-y: none;
   line-height: 1.5;

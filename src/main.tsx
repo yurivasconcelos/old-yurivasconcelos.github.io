@@ -5,6 +5,8 @@ import { createBrowserRouter, RouterProvider } from 'react-router-dom';
 import './index.css';
 import { TestComponent } from './components/TestsComponent.tsx';
 import { SlackComponent } from './components/SlackComponent.tsx';
+import SignInComponent from './components/SignInComponent.tsx';
+import FormsComponent from './components/FormsComponent.tsx';
 
 const router = createBrowserRouter([
   {
@@ -14,7 +16,9 @@ const router = createBrowserRouter([
       { path: '/test', element: <TestComponent /> },
       { path: '/test/:id', element: <TestComponent /> },
       { path: '/slack', element: <SlackComponent /> },
-      { path: '/slack/:message', element: <SlackComponent /> },
+      { path: '/signin', element: <SignInComponent /> },
+      { path: '/forms', element: <FormsComponent/> },
+
     ],
   },
 ]);

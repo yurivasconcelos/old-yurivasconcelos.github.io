@@ -10,19 +10,11 @@ function App() {
   return (
     <>
       <div>
-        <nav>
-          <ul>
-            <li>
-              <Link to={`test`}>Test Component</Link>
-            </li>
-            <li>
-            <Link to={`slack`}>Slack Message</Link>
-            <Link to={`slack/:1`}>Slack Message</Link>
-            </li>
+        <Link to={`test`}>Test Component</Link><br/>
+        <Link to={`slack`}>Slack Message</Link><br/>
+        <Link to={`signin`}>Sign in</Link><br/>
+        <Link to={`forms`}>Forms</Link><br/>
 
-          </ul>
-        </nav>
-        {/* where I wanna render the components */}
         <Outlet />
       </div>
     </>

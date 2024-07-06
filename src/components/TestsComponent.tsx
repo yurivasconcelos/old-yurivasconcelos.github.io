@@ -1,8 +1,9 @@
 import { useLocation } from 'react-router-dom';
+<script src='https://cdn.jsdelivr.net/npm/flowbite@2.4.1/dist/flowbite.min.js'></script>;
 
 export function TestComponent() {
-     const location = useLocation();    
-     console.log(location);
+  const location = useLocation();
+  console.log(location);
   return (
     <>
       <div>
@@ -126,6 +127,8 @@ export function TestComponent() {
           <span className='shrink-0 px-6'>Lorem, ipsum dolor</span>
           <span className='h-px flex-1 bg-black'></span>
         </span>
+
+        {/* datepicker */}
       </div>
     </>
   );

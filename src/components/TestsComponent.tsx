@@ -28,7 +28,7 @@ export function TestComponent() {
         <div className='p-4'>
           <button className='bg-white dark:bg-gray-900 dark:border-gray-700 dark:hover:bg-gray-800 rounded-lg hover:bg-gray-100 duration-300 transition-colors border px-8 py-2.5'>
             <svg className='w-5 h-5 sm:h-6 sm:w-6' viewBox='0 0 24 24' fill='none' xmlns='http://www.w3.org/2000/svg'>
-              <g clip-path='url(#clip0_3033_94454)'>
+              <g clipPath='url(#clip0_3033_94454)'>
                 <path
                   d='M23.766 12.2764C23.766 11.4607 23.6999 10.6406 23.5588 9.83807H12.24V14.4591H18.7217C18.4528 15.9494 17.5885 17.2678 16.323 18.1056V21.1039H20.19C22.4608 19.0139 23.766 15.9274 23.766 12.2764Z'
                   fill='#4285F4'
@@ -78,24 +78,50 @@ export function TestComponent() {
                 10+ years of software development experience, with a focus on front-end and back-end development.
               </p>
             </div>
-
-            {/* <div className='mt-4'>
-              <div className='flex items-center'>
-                <div className='flex items-center'>
-                  <img
-                    className='object-cover h-10 rounded-full'
-                    src='https://images.unsplash.com/photo-1586287011575-a23134f797f9?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=48&q=60'
-                    alt='Avatar'
-                  />
-                  <a href='#' className='mx-2 font-semibold text-gray-700 dark:text-gray-200' tabindex='0' role='link'>
-                    Jone Doe
-                  </a>
-                </div>
-                <span className='mx-1 text-xs text-gray-600 dark:text-gray-300'>21 SEP 2015</span>
-              </div>
-            </div> */}
           </div>
         </div>
+        {/* card-example finish */}
+
+        {/* pills example */}
+        <span className='bg-blue-100 text-blue-800 text-xs font-medium me-2 px-2.5 py-0.5 rounded-full dark:bg-blue-900 dark:text-blue-300'>
+          Default
+        </span>
+        <span className='bg-gray-100 text-gray-800 text-xs font-medium me-2 px-2.5 py-0.5 rounded-full dark:bg-gray-700 dark:text-gray-300'>
+          Dark
+        </span>
+        <span className='bg-red-100 text-red-800 text-xs font-medium me-2 px-2.5 py-0.5 rounded-full dark:bg-red-900 dark:text-red-300'>
+          Red
+        </span>
+        <span className='bg-green-100 text-green-800 text-xs font-medium me-2 px-2.5 py-0.5 rounded-full dark:bg-green-900 dark:text-green-300'>
+          Green
+        </span>
+        <span className='bg-yellow-100 text-yellow-800 text-xs font-medium me-2 px-2.5 py-0.5 rounded-full dark:bg-yellow-900 dark:text-yellow-300'>
+          Yellow
+        </span>
+        <span className='bg-indigo-100 text-indigo-800 text-xs font-medium me-2 px-2.5 py-0.5 rounded-full dark:bg-indigo-900 dark:text-indigo-300'>
+          Indigo
+        </span>
+        <span className='bg-purple-100 text-purple-800 text-xs font-medium me-2 px-2.5 py-0.5 rounded-full dark:bg-purple-900 dark:text-purple-300'>
+          Purple
+        </span>
+        <span className='bg-pink-100 text-pink-800 text-xs font-medium me-2 px-2.5 py-0.5 rounded-full dark:bg-pink-900 dark:text-pink-300'>
+          Pink
+        </span>
+        {/* pills example */}
+
+        {/* alert example - https://flowbite.com/docs/components/alerts/ */}
+        <div
+          className='p-4 mb-4 text-sm text-blue-800 rounded-lg bg-blue-50 dark:bg-gray-800 dark:text-blue-400'
+          role='alert'>
+          <span className='font-medium'>Info alert!</span> Change a few things up and try submitting again.
+        </div>
+        {/* alert example */}
+
+        <span className='flex items-center'>
+          <span className='h-px flex-1 bg-black'></span>
+          <span className='shrink-0 px-6'>Lorem, ipsum dolor</span>
+          <span className='h-px flex-1 bg-black'></span>
+        </span>
       </div>
     </>
   );

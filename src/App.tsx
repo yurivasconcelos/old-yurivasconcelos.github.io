@@ -6,15 +6,15 @@ import { SlackComponent } from './components/SlackComponent';
 import { TestComponent } from './components/TestsComponent';
 
 function App() {
-
   return (
     <>
       <div>
         {/* <Button></Button>
         <Effect name={count.toString()}></Effect>
         <FetchComponent></FetchComponent> */}
-        <SlackComponent/>
-        <TestComponent/>
+        <SlackComponent />
+        <TestComponent />
+
       </div>
     </>
   );

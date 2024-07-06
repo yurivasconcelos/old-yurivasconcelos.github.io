@@ -8,6 +8,7 @@ import SignInComponent from './components/SignInComponent.tsx';
 import FormsComponent from './components/FormsComponent.tsx';
 import { MarketingCard } from './components/MarketingCard.tsx';
 import './index.css';
+import { FlexboxContainer } from './components/FlexboxContainer.tsx';
 
 const router = createBrowserRouter([
   {
@@ -18,9 +19,9 @@ const router = createBrowserRouter([
       { path: '/test/:id', element: <TestComponent /> },
       { path: '/slack', element: <SlackComponent /> },
       { path: '/signin', element: <SignInComponent /> },
-      { path: '/forms', element: <FormsComponent/> },
-      { path: '/marketing', element: <MarketingCard/> },
-
+      { path: '/forms', element: <FormsComponent /> },
+      { path: '/marketing', element: <MarketingCard /> },
+      { path: '/flex', element: <FlexboxContainer /> },
     ],
   },
 ]);

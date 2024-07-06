@@ -8,16 +8,24 @@ export function SlackComponent() {
   return (
     <>
       <div>
-        <h1 className='text-3xl font-bold'>Send me a message on Slack!</h1>
+        <h1 className='text-4xl font-bold mb-5'>Send me a message!</h1>
+        <div className='flex items-center mb-4'>
+          <input
+            id='default-checkbox'
+            type='checkbox'
+            onChange={(e) => setIsLocal(e.target.checked)}
+            className='w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 rounded focus:ring-blue-500 dark:focus:ring-blue-600 dark:ring-offset-gray-800 focus:ring-2 dark:bg-gray-700 dark:border-gray-600'
+          />
+          <label className='ms-2 text-sm font-medium text-gray-900 dark:text-gray-300'>Local Environment?</label>
+        </div>
         <input
-          type='checkbox'
-          className='input'
-          name='Is Local'
-          id='IsLocal'
-          onChange={(e) => setIsLocal(e.target.checked)}
-        />
-        <input type='text' placeholder='input your message here' onChange={(e) => setMessage(e.target.value)}></input>
-        <button className='bg-black' onClick={() => sendMessage(message, isLocal)}>Send Message</button>
+          className='bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500'
+          type='text'
+          placeholder='your message here'
+          onChange={(e) => setMessage(e.target.value)}></input>
+        <button className='bg-green-200 my-4' onClick={() => sendMessage(message, isLocal)}>
+          Send Message
+        </button>
       </div>
     </>
   );

@@ -12,8 +12,8 @@ function App() {
   return (
     <>
       <div>
-        <Sidebar/>
         <Navbar/>
+        <Sidebar/>
         <Outlet />
       </div>
     </>

@@ -1,4 +1,8 @@
+import { useLocation } from 'react-router-dom';
+
 export function TestComponent() {
+     const location = useLocation();    
+     console.log(location);
   return (
     <>
       <div>

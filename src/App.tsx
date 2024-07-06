@@ -1,3 +1,4 @@
+import { Link, Outlet } from 'react-router-dom';
 import './App.css';
 // import { Button } from './components/Button';
 // import { Effect } from './components/Effect';
@@ -9,17 +10,20 @@ function App() {
   return (
     <>
       <div>
-        <p>Loaded!</p>
         <nav>
           <ul>
             <li>
-              <a href={`/test`}>Test</a>
+              <Link to={`test`}>Test Component</Link>
             </li>
             <li>
-              <a href={`/slack`}>Slack</a>
+            <Link to={`slack`}>Slack Message</Link>
+            <Link to={`slack/:1`}>Slack Message</Link>
             </li>
+
           </ul>
         </nav>
+        {/* where I wanna render the components */}
+        <Outlet />
       </div>
     </>
   );

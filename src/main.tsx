@@ -7,9 +7,16 @@ import { TestComponent } from './components/TestsComponent.tsx';
 import { SlackComponent } from './components/SlackComponent.tsx';
 
 const router = createBrowserRouter([
-  { path: '/', element: <App/> },
-  { path: '/test', element: <TestComponent/> },
-  { path: '/slack', element: <SlackComponent/> },
+  {
+    path: '/',
+    element: <App />,
+    children: [
+      { path: '/test', element: <TestComponent /> },
+      { path: '/test/:id', element: <TestComponent /> },
+      { path: '/slack', element: <SlackComponent /> },
+      { path: '/slack/:message', element: <SlackComponent /> },
+    ],
+  },
 ]);
 
 ReactDOM.createRoot(document.getElementById('root')!).render(

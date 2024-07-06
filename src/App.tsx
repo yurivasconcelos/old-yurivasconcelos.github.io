@@ -1,5 +1,7 @@
-import { Link, Outlet } from 'react-router-dom';
+import { Outlet } from 'react-router-dom';
 import './App.css';
+import Navbar from './components/Navbar';
+import { Sidebar } from './components/Sidebar';
 // import { Button } from './components/Button';
 // import { Effect } from './components/Effect';
 // import { FetchComponent } from './components/Fetch';
@@ -10,11 +12,8 @@ function App() {
   return (
     <>
       <div>
-        <Link to={`test`}>Test Component</Link><br/>
-        <Link to={`slack`}>Slack Message</Link><br/>
-        <Link to={`signin`}>Sign in</Link><br/>
-        <Link to={`forms`}>Forms</Link><br/>
-
+        <Sidebar/>
+        <Navbar/>
         <Outlet />
       </div>
     </>

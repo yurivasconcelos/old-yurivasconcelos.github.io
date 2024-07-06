@@ -161,7 +161,7 @@ export function FormsComponent() {
               required
             />
           </div>
-          <label for='remember' className='ms-2 text-sm font-medium text-gray-900 dark:text-gray-300'>
+          <label htmlFor='remember' className='ms-2 text-sm font-medium text-gray-900 dark:text-gray-300'>
             I agree with the{' '}
             <a href='#' className='text-blue-600 hover:underline dark:text-blue-500'>
               terms and conditions
@@ -177,6 +177,6 @@ export function FormsComponent() {
       </form>
     </div>
   );
-};
+}
 
 export default FormsComponent;

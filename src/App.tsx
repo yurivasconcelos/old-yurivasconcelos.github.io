@@ -8,7 +8,7 @@ function App() {
 
   return (
     <>
-      <div className='w-full'>
+      <div>
         {/* <Button></Button>
         <Effect name={count.toString()}></Effect>
         <FetchComponent></FetchComponent> */}

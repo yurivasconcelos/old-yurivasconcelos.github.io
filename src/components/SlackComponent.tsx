@@ -8,7 +8,7 @@ export function SlackComponent() {
   return (
     <>
       <div>
-        <h1 className='text-3xl font-bold'>Send me a message!</h1>
+        <h1 className='text-3xl font-bold'>Send me a message on Slack!</h1>
         <input
           type='checkbox'
           className='input'
@@ -17,7 +17,7 @@ export function SlackComponent() {
           onChange={(e) => setIsLocal(e.target.checked)}
         />
         <input type='text' placeholder='input your message here' onChange={(e) => setMessage(e.target.value)}></input>
-        <button onClick={() => sendMessage(message, isLocal)}>Send Message</button>
+        <button className='bg-black' onClick={() => sendMessage(message, isLocal)}>Send Message</button>
       </div>
     </>
   );

@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom';
 
 const Navbar: React.FC = () => {
   return (
-    <nav>
+    <div id='nav'>
       <Link to={`test`}>Test Component</Link>
       <br />
       <Link to={`slack`}>Slack Message</Link>
@@ -12,7 +12,7 @@ const Navbar: React.FC = () => {
       <br />
       <Link to={`forms`}>Forms</Link>
       <br />
-    </nav>
+    </div>
   );
 };
 

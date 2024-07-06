@@ -1,3 +1,5 @@
+// https://jonitrythall.com/content/flexboxsheet.pdf
+
 export function FlexboxContainer() {
   return (
     <>
@@ -35,6 +37,31 @@ export function FlexboxContainer() {
         <div>row</div>
         <div>justify</div>
         <div>space-between</div>
+      </div>
+
+
+      <div className='flex flex-row justify-around'>
+        <div>flex</div>
+        <div>direction</div>
+        <div>row</div>
+        <div>justify</div>
+        <div>space-around</div>
+      </div>
+
+      <div className='flex flex-row h-60'>
+        <div>flex</div>
+        <div>direction</div>
+        <div>row</div>
+        <div>height</div>
+        <div>bigger than elements</div>
+      </div>
+
+      <div className='flex flex-row h-60 justify-center items-center'>
+        <div>flex</div>
+        <div>direction</div>
+        <div>row</div>
+        <div>height</div>
+        <div>bigger</div>
       </div>
     </>
   );

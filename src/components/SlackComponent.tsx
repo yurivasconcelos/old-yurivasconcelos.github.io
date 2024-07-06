@@ -3,7 +3,7 @@ import { sendMessage } from '../services/SlackService';
 
 export function SlackComponent() {
   const [message, setMessage] = useState('');
-  const [isLocal, setIsLocal] = useState(true);
+  const [isLocal, setIsLocal] = useState(false);
   const [showButton, setShowButton] = useState(true);
 
   return (

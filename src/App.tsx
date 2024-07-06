@@ -3,7 +3,7 @@ import './App.css';
 // import { Effect } from './components/Effect';
 // import { FetchComponent } from './components/Fetch';
 import { SlackComponent } from './components/SlackComponent';
-import { TestComponent } from './components/TestsComponent';
+// import { TestComponent } from './components/TestsComponent';
 
 function App() {
 
@@ -14,7 +14,7 @@ function App() {
         <Effect name={count.toString()}></Effect>
         <FetchComponent></FetchComponent> */}
         <SlackComponent/>
-        <TestComponent/>
+        {/* <TestComponent/> */}
       </div>
     </>
   );

@@ -1,9 +1,8 @@
 import { useState } from 'react';
-import { Button } from './components/Button';
-import { Effect } from './components/Effect';
-
 import './App.css';
-import { FetchComponent } from './components/Fetch';
+// import { Button } from './components/Button';
+// import { Effect } from './components/Effect';
+// import { FetchComponent } from './components/Fetch';
 import { SlackComponent } from './components/SlackComponent';
 
 function App() {
@@ -12,9 +11,9 @@ function App() {
   return (
     <>
       <div>
-        <Button></Button>
+        {/* <Button></Button>
         <Effect name={count.toString()}></Effect>
-        <FetchComponent></FetchComponent>
+        <FetchComponent></FetchComponent> */}
         <SlackComponent></SlackComponent>
       </div>
       <div className='card'>

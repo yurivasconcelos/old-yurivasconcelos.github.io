@@ -11,6 +11,7 @@ import './index.css';
 import { FlexboxContainer } from './components/FlexboxContainer.tsx';
 import { FlexboxContainerItem } from './components/FlexboxContainerItem.tsx';
 import LoginComponent from './components/LoginComponent.tsx';
+import Calendar from './components/Calendar.tsx';
 
 const router = createBrowserRouter([
   {
@@ -26,6 +27,7 @@ const router = createBrowserRouter([
       { path: '/marketing', element: <MarketingCard /> },
       { path: '/flex', element: <FlexboxContainer /> },
       { path: '/flexitem', element: <FlexboxContainerItem /> },
+      { path: '/Calendar', element: <Calendar /> },
     ],
   },
 ]);

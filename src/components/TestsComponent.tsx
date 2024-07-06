@@ -1,4 +1,5 @@
 import { useLocation } from 'react-router-dom';
+import Calendar from './Calendar.jsx';
 <script src='https://cdn.jsdelivr.net/npm/flowbite@2.4.1/dist/flowbite.min.js'></script>;
 
 export function TestComponent() {
@@ -120,6 +121,8 @@ export function TestComponent() {
           <span className='shrink-0 px-6'>Lorem, ipsum dolor</span>
           <span className='h-px flex-1 bg-black'></span>
         </span>
+
+        <Calendar />
 
         {/* datepicker */}
       </div>

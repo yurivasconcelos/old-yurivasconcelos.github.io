@@ -9,6 +9,7 @@ import FormsComponent from './components/FormsComponent.tsx';
 import { MarketingCard } from './components/MarketingCard.tsx';
 import './index.css';
 import { FlexboxContainer } from './components/FlexboxContainer.tsx';
+import { FlexboxContainerItem } from './components/FlexboxContainerItem.tsx';
 
 const router = createBrowserRouter([
   {
@@ -22,6 +23,7 @@ const router = createBrowserRouter([
       { path: '/forms', element: <FormsComponent /> },
       { path: '/marketing', element: <MarketingCard /> },
       { path: '/flex', element: <FlexboxContainer /> },
+      { path: '/flexitem', element: <FlexboxContainerItem /> },
     ],
   },
 ]);

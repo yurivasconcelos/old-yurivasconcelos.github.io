@@ -16,7 +16,7 @@ export function FlexboxContainer() {
       </div>
 
       <div className='flex flex-row justify-center'>
-      <div>flex</div>
+        <div>flex</div>
         <div>direction</div>
         <div>row</div>
         <div>justify</div>
@@ -38,7 +38,6 @@ export function FlexboxContainer() {
         <div>justify</div>
         <div>space-between</div>
       </div>
-
 
       <div className='flex flex-row justify-around'>
         <div>flex</div>
@@ -62,6 +61,14 @@ export function FlexboxContainer() {
         <div>row</div>
         <div>height</div>
         <div>bigger</div>
+      </div>
+
+      <div className='flex flex-row justy-center items-center h-60 w-60 bg-slate-500'>
+        <div className='flex h-32'>1</div>
+        <div className='flex h-32 flex-col justify-center'>
+          <div>2</div>
+          <div>3</div>
+        </div>
       </div>
     </>
   );

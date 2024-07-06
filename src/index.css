@@ -23,16 +23,14 @@ html {
   word-wrap: break-word;
 
   /* DEBUG-purposes */
-  /* 
+/*   
   border-width: 1px;
   border-style: solid;
   border-color: #ae7953; */
+
 }
 body {
   margin: 0;
-  padding: 1rem;
-  place-items: center;
-  text-align: start;
   min-width: 320px;
   min-height: 100%;
 }

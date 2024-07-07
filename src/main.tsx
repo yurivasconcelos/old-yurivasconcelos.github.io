@@ -4,13 +4,12 @@ import App from './App.tsx';
 import { createHashRouter, RouterProvider } from 'react-router-dom';
 import { TestComponent } from './components/TestsComponent.tsx';
 import { SlackComponent } from './components/SlackComponent.tsx';
-import SignInComponent from './components/LoginComponent.tsx';
+import LoginComponent from './components/LoginComponent.tsx';
 import FormsComponent from './components/FormsComponent.tsx';
 import { MarketingCard } from './components/MarketingCard.tsx';
 import { FlexboxContainer } from './components/FlexboxContainer.tsx';
 import { FlexboxContainerItem } from './components/FlexboxContainerItem.tsx';
 import { NewComponent } from './components/NewComponent.tsx';
-import LoginComponent from './components/LoginComponent.tsx';
 import Calendar from './components/Calendar.tsx';
 import './index.css';
 import { TabComponent } from './components/TabComponent.tsx';
@@ -30,7 +29,7 @@ export const hashRouter = createHashRouter([
       { path: '/test', element: <TestComponent /> },
       { path: '/test/:id', element: <TestComponent /> },
       { path: '/slack', element: <SlackComponent /> },
-      { path: '/signin', element: <SignInComponent /> },
+      { path: '/signin', element: <LoginComponent /> },
       { path: '/forms', element: <FormsComponent /> },
       { path: '/marketing', element: <MarketingCard /> },
       { path: '/flex', element: <FlexboxContainer /> },

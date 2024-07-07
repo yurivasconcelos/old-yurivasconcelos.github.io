@@ -1,6 +1,15 @@
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+
+/* * {
+  border-width: 1px;
+  border-style: solid;
+  border-color: #ae7953;
+}
+ */
 
 /* THIS VERSION IS WORKING ON MOBILE WIDTH AND HEIGHT */
 
@@ -24,13 +33,6 @@ html {
 }
 
 
-/* debug */
-/* 
-* {
-  border-width: 1px;
-  border-style: solid;
-  border-color: #ae7953;
-}  */
 
 
 input[type="text"] {

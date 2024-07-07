@@ -16,7 +16,7 @@ import { TabComponent } from './components/TabComponent.tsx';
 import { GridComponent } from './components/GridComponent.tsx';
 import HomeComponent from './components/HomeComponent.tsx';
 import { FormGridComponent } from './components/FormGridComponent.tsx';
-import Navbar from './components/Navbar2.tsx';
+import Navbar from './components/Layout/Navbar.tsx';
 
 //why hashrouter https://stackoverflow.com/questions/71984401/react-router-not-working-with-github-pages
 export const hashRouter = createHashRouter([

@@ -4,7 +4,7 @@ import { Link } from 'react-router-dom';
 const Navbar: React.FC = () => {
   return (
     <>
-      <header className='py-2 text-white bg-gray-800 font-extrabold'>
+      <header className='py-1 text-white bg-gray-800 font-extrabold fixed w-full'>
         <div id='nav' className='grid grid-cols-12 m-1 pl-6 text-sm lg:text-base'>
           <div className='lg:hidden w-6'>
             <svg

@@ -29,7 +29,7 @@ export const hashRouter = createHashRouter([
       { path: '/test', element: <TestComponent /> },
       { path: '/test/:id', element: <TestComponent /> },
       { path: '/slack', element: <SlackComponent /> },
-      { path: '/signin', element: <LoginComponent /> },
+      { path: '/login', element: <LoginComponent /> },
       { path: '/forms', element: <FormsComponent /> },
       { path: '/marketing', element: <MarketingCard /> },
       { path: '/flex', element: <FlexboxContainer /> },

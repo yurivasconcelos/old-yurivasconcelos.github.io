@@ -1,33 +1,48 @@
-export function NewComponent({ hash }: { hash: string }) {
-  const selected = 'text-indigo-500 border-indigo-500 border-b-2  p-2';
-  const unselected = 'text-slate-500 hover:text-slate-600 rounded-lg p-2 hover:bg-gray-100';
+import { useState } from 'react';
+
+export function NewComponent() {
+  const [activeTab, setActiveTab] = useState(1);
+
+  const base =
+    'inline-block px-4 py-1 rounded-md rounded-b-none text-gray-800 hover:text-gray-900 hover:bg-gray-200 dark:hover:text-white ';
+  const active = base + 'text-white bg-indigo-800 hover:text-gray-200 hover:bg-indigo-800 active';
+  const nonactive = base + 'hover:text-gray-900 dark:hover:text-white';
+
   return (
     <>
-      <div>
-        <div className='bottom-0 w-full' aria-hidden='true'></div>
-        <ul className='text-sm font-medium flex flex-wrap -mx-4 sm:-mx-6 lg:-mx-8'>
-          <li className=''>
-            <a
-              className={`pb-3 ${hash == '' || hash == '#profile' ? selected : selected}`}
-              href='#profile'>
-              Geral
-            </a>
-          </li>
-          <li className='mr-6 last:mr-0 first:pl-4 sm:first:pl-6 lg:first:pl-8 last:pr-4 sm:last:pr-6 lg:last:pr-8'>
-            <a className={` ${hash == '#details' ? selected : unselected}`} href='#details'>
-              Detalhes
-            </a>
-          </li>
-          <li className='mr-6 last:mr-0 first:pl-4 sm:first:pl-6 lg:first:pl-8 last:pr-4 sm:last:pr-6 lg:last:pr-8'>
-            <a className={`${hash == '#settings' ? selected : unselected}`} href='#settings'>
-              Configurações
-            </a>
-          </li>
-        </ul>
-      </div>
-      <div className='flex flex-col shadow-sm pt-2'>
-        <div className='pl-4'>Title</div>
-        <div className='pl-4'>Content</div>
+      <div className='flex flex-col min-h-72'>
+        <div >
+          <ul className='flex flex-wrap sm:text-sm text-md font-small text-center'>
+            <li className='me-1'>
+              <a
+                onClick={() => setActiveTab(1)}
+                href='#'
+                className={`${activeTab == 1 ? active : nonactive} `}
+                aria-current='page'>
+                Perfil
+              </a>
+            </li>
+            <li className='me-2'>
+              <a href='#' onClick={() => setActiveTab(2)} className={`${activeTab == 2 ? active : nonactive} `}>
+                Adicional
+              </a>
+            </li>
+            <li className='me-2'>
+              <a href='#' onClick={() => setActiveTab(3)} className={`${activeTab == 3 ? active : nonactive} `}>
+                Testes
+              </a>
+            </li>
+            <li>
+              <a href='#' onClick={() => setActiveTab(4)} className={`${activeTab == 4 ? active : nonactive} `}>
+                Tab very long name name name
+              </a>
+            </li>
+          </ul>
+        </div>
+        <div className='flex flex-col pt-2 border-2 border-gray-200 rounded-lg border-t-0 shadow'>
+          <div className='pl-2'>Title</div>
+          <div className='pl-2 '>Content</div>
+        </div>
       </div>
     </>
   );

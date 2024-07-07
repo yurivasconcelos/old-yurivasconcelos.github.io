@@ -21,7 +21,7 @@ const router = createBrowserRouter([
     element: <App />,
     children: [
       { path: '/', element: <LoginComponent /> },
-      { path: '/new', element: <NewComponent hash={''} /> },
+      { path: '/new', element: <NewComponent /> },
       { path: '/test', element: <TestComponent /> },
       { path: '/test/:id', element: <TestComponent /> },
       { path: '/slack', element: <SlackComponent /> },

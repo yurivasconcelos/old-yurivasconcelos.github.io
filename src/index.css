@@ -21,14 +21,16 @@ html {
 ::after {
   box-sizing: border-box;
   word-wrap: break-word;
+}
 
-  /* DEBUG-purposes */
-/*   
+/* debug */
+
+/* * {
   border-width: 1px;
   border-style: solid;
-  border-color: #ae7953; */
+  border-color: #ae7953;
+} */
 
-}
 body {
   margin: 0;
   min-width: 320px;
@@ -84,3 +86,6 @@ button:focus-visible {
     background-color: #f9f9f9;
   }
 }
+
+/* colors */
+/* https://tailwindcss.com/docs/customizing-colors */

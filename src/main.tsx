@@ -7,11 +7,13 @@ import { SlackComponent } from './components/SlackComponent.tsx';
 import SignInComponent from './components/LoginComponent.tsx';
 import FormsComponent from './components/FormsComponent.tsx';
 import { MarketingCard } from './components/MarketingCard.tsx';
-import './index.css';
 import { FlexboxContainer } from './components/FlexboxContainer.tsx';
 import { FlexboxContainerItem } from './components/FlexboxContainerItem.tsx';
+import { NewComponent } from './components/NewComponent.tsx';
 import LoginComponent from './components/LoginComponent.tsx';
 import Calendar from './components/Calendar.tsx';
+import './index.css';
+import { TabComponent } from './components/TabComponent.tsx';
 
 const router = createBrowserRouter([
   {
@@ -19,6 +21,7 @@ const router = createBrowserRouter([
     element: <App />,
     children: [
       { path: '/', element: <LoginComponent /> },
+      { path: '/new', element: <NewComponent hash={''} /> },
       { path: '/test', element: <TestComponent /> },
       { path: '/test/:id', element: <TestComponent /> },
       { path: '/slack', element: <SlackComponent /> },
@@ -27,14 +30,14 @@ const router = createBrowserRouter([
       { path: '/marketing', element: <MarketingCard /> },
       { path: '/flex', element: <FlexboxContainer /> },
       { path: '/flexitem', element: <FlexboxContainerItem /> },
-      { path: '/Calendar', element: <Calendar /> },
+      { path: '/calendar', element: <Calendar /> },
+      { path: '/tab', element: <TabComponent /> },
     ],
   },
 ]);
 
 ReactDOM.createRoot(document.getElementById('root')!).render(
   <React.StrictMode>
-
     <RouterProvider router={router} />
   </React.StrictMode>
 );

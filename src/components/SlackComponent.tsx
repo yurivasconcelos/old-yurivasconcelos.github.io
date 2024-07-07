@@ -1,5 +1,5 @@
 import { useState } from 'react';
-// import { sendMessage } from '../services/slackService';
+import { sendMessage } from '../services/SlackService.ts';
 
 export function SlackComponent() {
   const [message, setMessage] = useState('');
@@ -27,7 +27,7 @@ export function SlackComponent() {
         <button
           className={`bg-green-200 my-4 ${showButton ? '' : 'invisible'}`}
           onClick={() => {
-            // sendMessage(message, isLocal);
+            sendMessage(message, isLocal);
             setShowButton(false);
           }}>
           Send

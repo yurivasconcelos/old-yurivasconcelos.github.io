@@ -4,7 +4,7 @@ import { Link } from 'react-router-dom';
 const Navbar: React.FC = () => {
   return (
     <>
-      <header className='py-2 pl-4 text-black bg-gray-800'>
+      <header className='py-2 pl-4 text-black bg-gray-800 font-extrabold'>
         <div id='nav' className='flex flex-row p-2 text-sm lg:text-base'>
           <div className='flex-grow justify-items-center'>
             <Link to={`test`}>Home</Link>

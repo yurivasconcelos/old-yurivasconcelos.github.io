@@ -1,3 +1,4 @@
+//https://tailwindcss.com/docs/grid-column
 export function GridComponent() {
   return (
     <>

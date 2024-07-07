@@ -15,6 +15,7 @@ import Calendar from './components/Calendar.tsx';
 import './index.css';
 import { TabComponent } from './components/TabComponent.tsx';
 import { GridComponent } from './components/GridComponent.tsx';
+import HomeComponent from './components/HomeComponent.tsx';
 
 const router = createBrowserRouter([
   {
@@ -22,6 +23,7 @@ const router = createBrowserRouter([
     element: <App />,
     children: [
       { path: '/', element: <LoginComponent /> },
+      { path: '/home', element: <HomeComponent /> },
       { path: '/new', element: <NewComponent /> },
       { path: '/test', element: <TestComponent /> },
       { path: '/test/:id', element: <TestComponent /> },

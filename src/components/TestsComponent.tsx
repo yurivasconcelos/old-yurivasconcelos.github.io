@@ -1,5 +1,4 @@
 import { useLocation } from 'react-router-dom';
-import Calendar from './Calendar.jsx';
 <script src='https://cdn.jsdelivr.net/npm/flowbite@2.4.1/dist/flowbite.min.js'></script>;
 
 export function TestComponent() {
@@ -61,70 +60,6 @@ export function TestComponent() {
           </button>
         </div>
         {/* google finish */}
-
-        {/* card-example */}
-        <div className='max-w-2xl overflow-hidden bg-white rounded-lg shadow-xl dark:bg-gray-800'>
-          <img
-            className='object-cover w-full h-64'
-            src='https://images.unsplash.com/photo-1550439062-609e1531270e?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=500&q=60'
-            alt='Article'
-          />
-
-          <div className='p-6'>
-            <div>
-              <span className='text-xs font-medium text-blue-600 uppercase dark:text-blue-400'>Product</span>
-              <a
-                href='#'
-                className='block mt-2 text-xl font-semibold text-gray-800 transition-colors duration-300 transform dark:text-white hover:text-gray-600 hover:underline'
-                tabIndex={0}
-                role='link'>
-                Yuri Vasconcelos
-              </a>
-              <p className='mt-2 text-sm text-gray-600 dark:text-gray-400'>
-                10+ years of software development experience, with a focus on front-end and back-end development.
-              </p>
-            </div>
-          </div>
-        </div>
-        {/* card-example finish */}
-
-        {/* pills example */}
-        <div>
-          <span className='bg-blue-100 text-blue-800 text-xs font-medium me-2 px-2.5 py-0.5 rounded-full dark:bg-blue-900 dark:text-blue-300'>
-            Default
-          </span>
-          <span className='bg-gray-100 text-gray-800 text-xs font-medium me-2 px-2.5 py-0.5 rounded-full dark:bg-gray-700 dark:text-gray-300'>
-            Dark
-          </span>
-          <span className='bg-red-100 text-red-800 text-xs font-medium me-2 px-2.5 py-0.5 rounded-full dark:bg-red-900 dark:text-red-300'>
-            Red
-          </span>
-          <span className='bg-green-100 text-green-800 text-xs font-medium me-2 px-2.5 py-0.5 rounded-full dark:bg-green-900 dark:text-green-300'>
-            Green
-          </span>
-          <span className='bg-yellow-100 text-yellow-800 text-xs font-medium me-2 px-2.5 py-0.5 rounded-full dark:bg-yellow-900 dark:text-yellow-300'>
-            Yellow
-          </span>
-        </div>
-        {/* pills example */}
-
-        {/* alert example - https://flowbite.com/docs/components/alerts/ */}
-        <div
-          className='p-4 mb-4 text-sm text-blue-800 rounded-lg bg-blue-50 dark:bg-gray-800 dark:text-blue-400'
-          role='alert'>
-          <span className='font-medium'>Info alert!</span> Change a few things up and try submitting again.
-        </div>
-        {/* alert example */}
-
-        <span className='flex items-center'>
-          <span className='h-px flex-1 bg-black'></span>
-          <span className='shrink-0 px-6'>Lorem, ipsum dolor</span>
-          <span className='h-px flex-1 bg-black'></span>
-        </span>
-
-        <Calendar />
-
-        {/* datepicker */}
       </div>
     </>
   );

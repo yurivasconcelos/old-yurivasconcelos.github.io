@@ -2,7 +2,7 @@
 const localUrl = 'https://localhost:7004';
 const serverUrl = 'https://yurifx.azurewebsites.net';
 
-export async function fetcher(
+export function fetcher(
   useLocal: boolean = true,
   url: string,
   method: string,

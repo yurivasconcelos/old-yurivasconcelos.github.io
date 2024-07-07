@@ -23,6 +23,16 @@ html {
   word-wrap: break-word;
 }
 
+
+/* debug */
+/* 
+* {
+  border-width: 1px;
+  border-style: solid;
+  border-color: #ae7953;
+}  */
+
+
 input[type="text"] {
   width: 100%; 
   box-sizing: border-box;
@@ -36,14 +46,6 @@ input[type="textarea"] {
   -webkit-box-sizing:border-box;
   -moz-box-sizing: border-box;
 }
-
-/* debug */
-
- * {
-  border-width: 1px;
-  border-style: solid;
-  border-color: #ae7953;
-} 
 
 body {
   margin: 0;

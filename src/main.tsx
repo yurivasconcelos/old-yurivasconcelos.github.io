@@ -14,6 +14,7 @@ import LoginComponent from './components/LoginComponent.tsx';
 import Calendar from './components/Calendar.tsx';
 import './index.css';
 import { TabComponent } from './components/TabComponent.tsx';
+import { GridComponent } from './components/GridComponent.tsx';
 
 const router = createBrowserRouter([
   {
@@ -32,6 +33,7 @@ const router = createBrowserRouter([
       { path: '/flexitem', element: <FlexboxContainerItem /> },
       { path: '/calendar', element: <Calendar /> },
       { path: '/tab', element: <TabComponent /> },
+      { path: '/grid', element: <GridComponent /> },
     ],
   },
 ]);

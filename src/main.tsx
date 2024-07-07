@@ -16,6 +16,7 @@ import './index.css';
 import { TabComponent } from './components/TabComponent.tsx';
 import { GridComponent } from './components/GridComponent.tsx';
 import HomeComponent from './components/HomeComponent.tsx';
+import { FormGridComponent } from './components/FormGridComponent.tsx';
 
 const router = createBrowserRouter([
   {
@@ -36,6 +37,7 @@ const router = createBrowserRouter([
       { path: '/calendar', element: <Calendar /> },
       { path: '/tab', element: <TabComponent /> },
       { path: '/grid', element: <GridComponent /> },
+      { path: '/formgrid', element: <FormGridComponent /> },
     ],
   },
 ]);

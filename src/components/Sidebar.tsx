@@ -6,8 +6,17 @@ export function Sidebar() {
       <div className='pl-4 pt-2 w-40'>
         <Link to={`formgrid`}>FormsGrid</Link>
       </div>
+
       <div className='pl-4 pt-2 w-40'>
         <Link to={`test`}>test</Link>
+      </div>
+
+      <div className='pl-4 pt-2 w-40'>
+        <Link to={`new`}>new component</Link>
+      </div>
+      
+      <div className='pl-4 pt-2 w-40'>
+        <Link to={`tab`}>tabs</Link>
       </div>
     </div>
   );

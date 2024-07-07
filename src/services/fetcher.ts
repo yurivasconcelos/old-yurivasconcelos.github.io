@@ -13,7 +13,7 @@ export function fetcher(
   const token = localStorage.getItem('token') ?? '';
   const bodyRequest = method == 'POST' ? JSON.stringify(body) : null;
 
-  console.log(`sending request to:${endpoint} with body ${bodyRequest} and token ${token}}`)
+  console.log(`sending request to:${endpoint} with body ${bodyRequest} and token ${token ?? `null`}`);
 
   return fetch(`${endpoint}`, {
     method,
@@ -23,8 +23,10 @@ export function fetcher(
     },
     body: bodyRequest,
   })
-    .then((res) => {
-      res.json().then(responseString => console.log('response', responseString));
-    })
+    .then((res) => res.json())
     .catch((err) => console.log(err));
+}
+
+export function fetcher2() {
+  return fetch('https://localhost:7004/test').then((x) => x.json());
 }

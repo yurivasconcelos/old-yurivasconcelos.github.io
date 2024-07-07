@@ -1,14 +1,24 @@
 import { useState } from 'react';
 import { sendMessage } from '../services/SlackService.ts';
+import { fetcher } from '../services/fetcher.ts';
+import useSWR from 'swr'
 
 export function SlackComponent() {
   const [message, setMessage] = useState('');
   const [isLocal, setIsLocal] = useState(false);
   const [showButton, setShowButton] = useState(true);
 
+
+  const myfetcher1 = () => fetcher(true, "/test", "GET", null);
+  const { isLoading, data, error } = useSWR('test', myfetcher1)
+
   return (
     <>
       <div>
+        <p>Testing API</p>
+        <p>error: {JSON.stringify(error)}</p>
+        <p>data: {JSON.stringify(data)}</p>
+        <p>loading: {JSON.stringify(isLoading)}</p>
         <h1 className='text-4xl font-bold mb-5'>Send me a message on Slack!</h1>
         <div className='flex items-center mb-4'>
           <input

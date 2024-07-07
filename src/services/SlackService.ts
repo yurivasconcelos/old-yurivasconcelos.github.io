@@ -1,5 +1,4 @@
 import { fetcher } from './fetcher';
-import useSWR from 'swr'
 
 
 const url = '/slackTest'

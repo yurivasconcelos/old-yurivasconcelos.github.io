@@ -1,5 +1,5 @@
 import { Outlet } from 'react-router-dom';
-import Navbar from './components/Navbar';
+import Navbar from './components/Navbar2';
 import { Sidebar } from './components/Sidebar';
 
 function App() {
@@ -7,7 +7,7 @@ function App() {
     <>
       <div className='flex flex-col h-screen'>
         <Navbar />
-        <div className='flex flex-row flex-grow mt-8'>
+        <div className='flex flex-row flex-grow pt-16'>
           <Sidebar />
           <main className='flex-1 overflow-y-auto p-5'>
             <Outlet />

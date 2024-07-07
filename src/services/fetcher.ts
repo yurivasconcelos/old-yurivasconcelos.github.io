@@ -9,16 +9,22 @@ export function fetcher(
   body: { [key: string]: unknown } | null
 ) {
   const baseURL = useLocal ? localUrl : serverUrl;
+  const endpoint = baseURL + url;
   const token = localStorage.getItem('token') ?? '';
+  const bodyRequest = method == 'POST' ? JSON.stringify(body) : null;
 
-  return fetch(`${baseURL}${url}`, {
+  console.log(`sending request to:${endpoint} with body ${bodyRequest} and token ${token}}`)
+
+  return fetch(`${endpoint}`, {
     method,
     headers: {
       'Content-Type': 'application/json',
       'Authorization': 'Bearer ' + token,
     },
-    body: method == 'POST' ? JSON.stringify(body) : null,
+    body: bodyRequest,
   })
-    .then((res) => res.json())
+    .then((res) => {
+      res.json().then(responseString => console.log('response', responseString));
+    })
     .catch((err) => console.log(err));
 }

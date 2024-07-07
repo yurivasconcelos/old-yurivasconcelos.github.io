@@ -27,12 +27,11 @@ export function SlackComponent() {
         <button
           className={`bg-green-200 my-4 ${showButton ? '' : 'invisible'}`}
           onClick={() => {
-            sendMessage(message, isLocal);
+            sendMessage(message, isLocal)
             setShowButton(false);
           }}>
           Send
         </button>
-
 
         <div
           className={`flex w-full  overflow-hidden bg-white rounded-lg shadow-md dark:bg-gray-800 ${

@@ -1,6 +1,7 @@
 import { Outlet } from 'react-router-dom';
 import Navbar from './components/Layout/Navbar';
 import { Sidebar } from './components/Layout/Sidebar';
+import { Bottom } from './components/Layout/Bottom';
 
 function App() {
   return (
@@ -12,6 +13,9 @@ function App() {
           <main className='flex-1 overflow-y-auto sm:ml-64 p-5'>
             <Outlet />
           </main>
+          <footer className='md:hidden'>
+            <Bottom/>
+          </footer>
         </div>
       </div>
     </>

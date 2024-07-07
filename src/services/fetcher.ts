@@ -1,7 +1,7 @@
-const baseURL = 'https://localhost:7004/';
-// const baseURL = 'https://yurifx.azurewebsites.net/';
+const baseURL = 'https://localhost:7004';
+// const baseURL = 'https://yurifx.azurewebsites.net';
 
-export async function fetcher(url: string, method: string, body: { [key: string]: unknown }) {
+export async function fetcher(url: string, method: string, body: { [key: string]: unknown } | null) {
   const token = localStorage.getItem('token') ?? '';
 
   return fetch(`${baseURL}${url}`, {
@@ -10,7 +10,7 @@ export async function fetcher(url: string, method: string, body: { [key: string]
       'Content-Type': 'application/json',
       'Authorization': 'Bearer ' + token,
     },
-    body: JSON.stringify(body),
+    body: method == "POST" ? JSON.stringify(body) : null,
   })
     .then((res) => res.json())
     .catch((err) => console.log(err));

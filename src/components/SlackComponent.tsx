@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import { sendMessage } from '../services/slackService';
+import { sendMessage } from '../services/slackService.ts';
 
 export function SlackComponent() {
   const [message, setMessage] = useState('');

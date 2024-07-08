@@ -1,6 +1,8 @@
 import { useState } from 'react';
 import { slackMessageService, testService } from '../services/services.ts';
 import useSWR from 'swr';
+import { Button } from './@shadcn/button.tsx';
+import { Alert } from './@shadcn/alert.tsx';
 
 export function SlackComponent() {
   const [message, setMessage] = useState('');
@@ -33,15 +35,16 @@ export function SlackComponent() {
           type='textarea'
           placeholder='your message here'
           onChange={(e) => setMessage(e.target.value)}></input>
-        <button
-          className={`bg-green-200 my-4 ${showButton ? '' : 'invisible'}`}
+        <Button
+          className={`${showButton ? '' : 'invisible'}`}
           onClick={() => {
             slackMessageService.postSlackMessage(isLocal, message).then((x) => console.log(x));
             setShowButton(false);
           }}>
           Send
-        </button>
-
+        </Button>
+        <Alert>Hey</Alert>
+       
         <div
           className={`flex w-full  overflow-hidden bg-white rounded-lg shadow-md dark:bg-gray-800 ${
             showButton ? 'invisible' : ''

@@ -2,8 +2,12 @@ import { Outlet } from 'react-router-dom';
 import Navbar from './components/Layout/Navbar';
 import { Sidebar } from './components/Layout/Sidebar';
 import { Bottom } from './components/Layout/Bottom';
+import { useLocation } from 'react-router-dom';
 
 function App() {
+  const location = useLocation();
+  console.log(location.key);
+
   return (
     <>
       <div className='flex flex-col h-screen'>
@@ -14,7 +18,7 @@ function App() {
             <Outlet />
           </main>
           <footer className='md:hidden'>
-            <Bottom/>
+            <Bottom />
           </footer>
         </div>
       </div>

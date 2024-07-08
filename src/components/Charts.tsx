@@ -1,13 +1,12 @@
-import { useLocation } from 'react-router-dom';
-import { Button } from './@shadcn/button';
-import { Monitor } from 'lucide-react';
-
+//https://ui.shadcn.com/charts
 import { Bar, BarChart, CartesianGrid, XAxis } from 'recharts';
+import { Monitor } from 'lucide-react';
+import { Button } from './@shadcn/button';
 import { ChartConfig, ChartContainer, ChartTooltip, ChartTooltipContent } from './@shadcn/chart';
 
 <script src='https://cdn.jsdelivr.net/npm/flowbite@2.4.1/dist/flowbite.min.js'></script>;
 
-export function TestComponent() {
+export function Charts() {
   const chartData = [
     { month: 'January', desktop: 186, mobile: 80 },
     { month: 'February', desktop: 305, mobile: 200 },
@@ -28,8 +27,6 @@ export function TestComponent() {
     },
   } satisfies ChartConfig;
 
-  const location = useLocation();
-  console.log(location);
   return (
     <>
       <ChartContainer config={chartConfig} className='min-h-[200px] w-1/2'>

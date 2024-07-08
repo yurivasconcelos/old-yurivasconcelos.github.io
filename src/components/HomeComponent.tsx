@@ -1,9 +1,7 @@
 export function HomeComponent() {
-  return (
+return (
     <>
       <p>this is home</p>
     </>
   );
 }
-
-export default HomeComponent;

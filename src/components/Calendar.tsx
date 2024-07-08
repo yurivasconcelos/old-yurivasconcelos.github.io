@@ -2,7 +2,7 @@
 import React, { useState, useEffect } from 'react';
 
 
-export default function Calendar() {
+export function Calendar() {
 
   const today = new Date();
   const monthNames = ['January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December']

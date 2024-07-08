@@ -1,4 +1,4 @@
-import { BellIcon, HeartIcon, MixIcon, PersonIcon, QuoteIcon, SunIcon } from '@radix-ui/react-icons';
+import { BarChartIcon, BellIcon, HeartIcon, MixIcon, PersonIcon, QuoteIcon, SunIcon } from '@radix-ui/react-icons';
 import { Link } from 'react-router-dom';
 
 export function Sidebar() {
@@ -49,12 +49,11 @@ export function Sidebar() {
               </Link>
             </li>
             <li>
-              <a
-                href='#'
+              <Link to='chart'
                 className='flex items-center p-2 text-gray-900 rounded-lg dark:text-white hover:bg-gray-100 dark:hover:bg-gray-700 group'>
-                <HeartIcon />
-                <span className='flex-1 ms-3 whitespace-nowrap'>Products</span>
-              </a>
+                <BarChartIcon />
+                <span className='flex-1 ms-3 whitespace-nowrap'>Charts</span>
+              </Link>
             </li>
             <li>
               <a

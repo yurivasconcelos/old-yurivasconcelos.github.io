@@ -12,6 +12,7 @@ import { FormsComponent } from './components/FormsComponent.tsx';
 import { MarketingCard } from './components/MarketingCard.tsx';
 import { NewComponent } from './components/NewComponent.tsx';
 import { Calendar } from './components/Calendar.tsx';
+import { Charts } from './components/Charts.tsx';
 import { TabComponent } from './components/TabComponent.tsx';
 import { GridComponent } from './components/GridComponent.tsx';
 import { FormGridComponent } from './components/FormGridComponent.tsx';
@@ -40,6 +41,7 @@ export const hashRouter = createHashRouter([
       { path: '/grid', element: <GridComponent /> },
       { path: '/formgrid', element: <FormGridComponent /> },
       { path: '/navbar2', element: <Navbar /> },
+      { path: '/charts', element: <Charts /> },
     ],
   },
 ]);

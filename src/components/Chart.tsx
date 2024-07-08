@@ -4,9 +4,7 @@ import { Monitor } from 'lucide-react';
 import { Button } from './@shadcn/button';
 import { ChartConfig, ChartContainer, ChartTooltip, ChartTooltipContent } from './@shadcn/chart';
 
-<script src='https://cdn.jsdelivr.net/npm/flowbite@2.4.1/dist/flowbite.min.js'></script>;
-
-export function Charts() {
+export function Chart() {
   const chartData = [
     { month: 'January', desktop: 186, mobile: 80 },
     { month: 'February', desktop: 305, mobile: 200 },

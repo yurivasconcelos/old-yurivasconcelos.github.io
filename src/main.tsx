@@ -10,9 +10,8 @@ import { SlackComponent } from './components/SlackComponent.tsx';
 import { LoginComponent } from './components/LoginComponent.tsx';
 import { FormsComponent } from './components/FormsComponent.tsx';
 import { MarketingCard } from './components/MarketingCard.tsx';
-import { NewComponent } from './components/NewComponent.tsx';
 import { Calendar } from './components/Calendar.tsx';
-import { Charts } from './components/Charts.tsx';
+import { Chart } from './components/Chart.tsx';
 import { TabComponent } from './components/TabComponent.tsx';
 import { GridComponent } from './components/GridComponent.tsx';
 import { FormGridComponent } from './components/FormGridComponent.tsx';
@@ -27,7 +26,6 @@ export const hashRouter = createHashRouter([
     children: [
       { path: '/', element: <LoginComponent /> },
       { path: '/home', element: <HomeComponent /> },
-      { path: '/new', element: <NewComponent /> },
       { path: '/test', element: <TestComponent /> },
       { path: '/card', element: <CardComponent /> },
       { path: '/test/:id', element: <TestComponent /> },
@@ -41,7 +39,7 @@ export const hashRouter = createHashRouter([
       { path: '/grid', element: <GridComponent /> },
       { path: '/formgrid', element: <FormGridComponent /> },
       { path: '/navbar2', element: <Navbar /> },
-      { path: '/charts', element: <Charts /> },
+      { path: '/chart', element: <Chart /> },
     ],
   },
 ]);

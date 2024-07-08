@@ -1,3 +1,4 @@
+// eslint-disable-next-line @typescript-eslint/ban-ts-comment
 // @ts-nocheck
 import React, { useState, useEffect } from 'react';
 import { Button } from './@shadcn/button';
@@ -184,20 +185,20 @@ export function Calendar() {
 
     // starting empty cells (previous month)
     const startingDayOfWeek = new Date(year, month).getDay();
-    let startingBlankDaysArray = [];
+    const startingBlankDaysArray = [];
     for (let i = 1; i <= startingDayOfWeek; i++) {
       startingBlankDaysArray.push(i);
     }
 
     // ending empty cells (next month)
     const endingDayOfWeek = new Date(year, month + 1, 0).getDay();
-    let endingBlankDaysArray = [];
+    const endingBlankDaysArray = [];
     for (let i = 1; i < 7 - endingDayOfWeek; i++) {
       endingBlankDaysArray.push(i);
     }
 
     // current month cells
-    let daysArray = [];
+    const daysArray = [];
     for (let i = 1; i <= days; i++) {
       daysArray.push(i);
     }

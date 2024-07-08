@@ -1,5 +1,6 @@
 // @ts-nocheck
 import React, { useState, useEffect } from 'react';
+import { Button } from './@shadcn/button';
 
 
 export function Calendar() {
@@ -149,24 +150,7 @@ export function Calendar() {
       eventName: '✍️ New Project (2)',
       eventColor: 'yellow'
     },
-    {
-      eventStart: new Date(new Date().getFullYear(), new Date().getMonth() + 1, 14, 10),
-      eventEnd: new Date(new Date().getFullYear(), new Date().getMonth(), 14, 11),
-      eventName: 'Team Catch-up',
-      eventColor: 'sky'
-    },
-    {
-      eventStart: new Date(new Date().getFullYear(), new Date().getMonth() + 1, 25, 2),
-      eventEnd: new Date(new Date().getFullYear(), new Date().getMonth() + 1, 25, 3),
-      eventName: 'Pick up Marta at school',
-      eventColor: 'emerald'
-    },
-    {
-      eventStart: new Date(new Date().getFullYear(), new Date().getMonth() + 1, 27, 21),
-      eventEnd: new Date(new Date().getFullYear(), new Date().getMonth() + 1, 27, 22),
-      eventName: '⚽ 2021 - Semi-final',
-      eventColor: 'red'
-    },
+
   ];
 
   const isToday = (date) => {
@@ -232,8 +216,7 @@ export function Calendar() {
     <div className="flex h-screen overflow-hidden">
 
       {/* Content area */} 
-      <div className="relative flex flex-col flex-1 overflow-y-auto overflow-x-hidden">
-
+      <div className="flex flex-col flex-1 overflow-x-hidden overflow-y-auto">
         <main>
           <div className="px-4 sm:px-6 lg:px-8 py-8 w-full max-w-9xl mx-auto">
 
@@ -242,7 +225,7 @@ export function Calendar() {
 
               {/* Left: Title */}
               <div className="mb-4 sm:mb-0">
-                <h1 className="text-2xl md:text-3xl text-slate-800 font-bold"><span>{`${monthNames[month]} ${year}`}</span> ✨</h1>
+                <p className="text-2xl md:text-3xl text-slate-800 font-bold"><span>{`${monthNames[month]} ${year}`}</span> ✨</p>
               </div>
 
               {/* Right: Actions */}
@@ -274,68 +257,11 @@ export function Calendar() {
 
                 <hr className="w-px h-full bg-slate-200 mx-1" />
 
-                {/* Create event button */}
-                <button className="btn bg-indigo-500 hover:bg-indigo-600 text-white">
-                  <svg className="w-4 h-4 fill-current opacity-50 shrink-0" viewBox="0 0 16 16">
-                    <path d="M15 7H9V1c0-.6-.4-1-1-1S7 .4 7 1v6H1c-.6 0-1 .4-1 1s.4 1 1 1h6v6c0 .6.4 1 1 1s1-.4 1-1V9h6c.6 0 1-.4 1-1s-.4-1-1-1z" />
-                  </svg>
-                  <span className="hidden xs:block ml-2">Create Event</span>
-                </button>
+                <Button>Adicionar</Button>
 
               </div>
 
             </div>
-
-            {/* Filters and view buttons */}
-            <div className="sm:flex sm:justify-between sm:items-center mb-4">
-
-              {/* Filters  */}
-              <div className="mb-4 sm:mb-0 mr-2">
-                <ul className="flex flex-wrap items-center -m-1">
-                  <li className="m-1">
-                    <button className="btn-sm bg-white border-slate-200 hover:border-slate-300 text-slate-500">
-                      <div className="w-1 h-3.5 bg-sky-500 shrink-0"></div>
-                      <span className="ml-1.5">Acme Inc.</span>
-                    </button>
-                  </li>
-                  <li className="m-1">
-                    <button className="btn-sm bg-white border-slate-200 hover:border-slate-300 text-slate-500">
-                      <div className="w-1 h-3.5 bg-emerald-500 shrink-0"></div>
-                      <span className="ml-1.5">Life & Family</span>
-                    </button>
-                  </li>
-                  <li className="m-1">
-                    <button className="btn-sm bg-white border-slate-200 hover:border-slate-300 text-slate-500">
-                      <div className="w-1 h-3.5 bg-indigo-500 shrink-0"></div>
-                      <span className="ml-1.5">Reservations</span>
-                    </button>
-                  </li>
-                  <li className="m-1">
-                    <button className="btn-sm bg-white border-slate-200 hover:border-slate-300 text-slate-500">
-                      <div className="w-1 h-3.5 bg-rose-400 shrink-0"></div>
-                      <span className="ml-1.5">Events</span>
-                    </button>
-                  </li>
-                  <li className="m-1">
-                    <button className="btn-sm bg-white border-slate-200 hover:border-slate-300 text-slate-500">
-                      <div className="w-1 h-3.5 bg-amber-500 shrink-0"></div>
-                      <span className="ml-1.5">Misc</span>
-                    </button>
-                  </li>
-                  <li className="m-1">
-                    <button className="btn-sm bg-white border-slate-200 hover:border-slate-300 text-indigo-500">+Add New</button>
-                  </li>
-                </ul>
-              </div>
-
-              {/* View buttons (requires custom integration) */}
-              <div className="flex flex-nowrap -space-x-px">
-                <button className="btn bg-slate-50 border-slate-200 hover:bg-slate-50 text-indigo-500 rounded-none first:rounded-l last:rounded-r">Month</button>
-                <button className="btn bg-white border-slate-200 hover:bg-slate-50 text-slate-600 rounded-none first:rounded-l last:rounded-r">Week</button>
-                <button className="btn bg-white border-slate-200 hover:bg-slate-50 text-slate-600 rounded-none first:rounded-l last:rounded-r">Day</button>
-              </div>
-            </div>
-
             {/* Calendar table */}
             <div className="bg-white rounded-sm shadow overflow-hidden">
 

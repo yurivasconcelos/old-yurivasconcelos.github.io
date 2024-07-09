@@ -1,4 +1,4 @@
-import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from './@shadcn/card';
+import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from '../@shadcn/card';
 
 export function CardComponent() {
   return (

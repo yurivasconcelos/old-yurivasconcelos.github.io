@@ -1,8 +1,8 @@
 import { useState } from 'react';
 import { slackMessageService, testService } from '../services/services.ts';
 import useSWR from 'swr';
-import { Button } from './@shadcn/button.tsx';
-import { Alert } from './@shadcn/alert.tsx';
+import { Button } from '../@shadcn/button.tsx';
+import { Alert } from '../@shadcn/alert.tsx';
 
 export function SlackComponent() {
   const [message, setMessage] = useState('');

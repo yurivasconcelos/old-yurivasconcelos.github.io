@@ -1,11 +1,11 @@
-import { Card } from './@shadcn/card';
-import { Button } from './@shadcn/button';
+import { Card } from '../@shadcn/card';
+import { Button } from '../@shadcn/button';
 import { toast } from 'sonner';
 
-import { Popover, PopoverContent, PopoverTrigger } from './@shadcn/popover';
-import { Label } from './@shadcn/label';
-import { Input } from './@shadcn/input';
-import { ResizableHandle, ResizablePanel, ResizablePanelGroup } from './@shadcn/resizable';
+import { Popover, PopoverContent, PopoverTrigger } from '../@shadcn/popover';
+import { Label } from '../@shadcn/label';
+import { Input } from '../@shadcn/input';
+import { ResizableHandle, ResizablePanel, ResizablePanelGroup } from '../@shadcn/resizable';
 import {
   Select,
   SelectContent,
@@ -14,7 +14,7 @@ import {
   SelectLabel,
   SelectTrigger,
   SelectValue,
-} from './@shadcn/select';
+} from '../@shadcn/select';
 import {
   Sheet,
   SheetClose,
@@ -24,7 +24,19 @@ import {
   SheetHeader,
   SheetTitle,
   SheetTrigger,
-} from './@shadcn/sheet';
+} from '../@shadcn/sheet';
+import { Switch } from '../@shadcn/switch';
+import { Tabs, TabsContent, TabsList, TabsTrigger } from '../@shadcn/tabs';
+import {
+  NavigationMenu,
+  NavigationMenuContent,
+  NavigationMenuItem,
+  NavigationMenuLink,
+  NavigationMenuList,
+  NavigationMenuTrigger,
+} from '../@shadcn/navigation-menu';
+import { Tooltip, TooltipContent, TooltipProvider, TooltipTrigger } from '../@shadcn/tooltip';
+import { Toggle } from '../@shadcn/toggle';
 
 export function TestComponent() {
   return (
@@ -112,36 +124,38 @@ export function TestComponent() {
         </Select>
       </div>
 
-      <Sheet>
-        <SheetTrigger asChild>
-          <Button variant='outline'>Open</Button>
-        </SheetTrigger>
-        <SheetContent side='right' className='w-[800px] sm:w-[540px]'>
-          <SheetHeader>
-            <SheetTitle>Edit profile</SheetTitle>
-            <SheetDescription>Make changes to your profile here. Click save when you're done.</SheetDescription>
-          </SheetHeader>
-          <div className='grid gap-4 py-4'>
-            <div className='grid grid-cols-4 items-center gap-4'>
-              <Label htmlFor='name' className='text-right'>
-                Name
-              </Label>
-              <Input id='name' value='Pedro Duarte' className='col-span-3' />
+      <div>
+        <Sheet>
+          <SheetTrigger>
+            <Button variant='outline'>Open</Button>
+          </SheetTrigger>
+          <SheetContent side='right' className='w-[380px] lg:min-w-[600px]'>
+            <SheetHeader>
+              <SheetTitle>Edit profile</SheetTitle>
+              <SheetDescription>Make changes to your profile here. Click save when you're done.</SheetDescription>
+            </SheetHeader>
+            <div className='grid gap-4 py-4'>
+              <div className='grid grid-cols-4 items-center gap-4'>
+                <Label htmlFor='name' className='text-right'>
+                  Name
+                </Label>
+                <Input id='name' value='Yuri Vasconcelos' className='col-span-3' />
+              </div>
+              <div className='grid grid-cols-4 items-center gap-4'>
+                <Label htmlFor='username' className='text-right'>
+                  Username
+                </Label>
+                <Input id='username' value='@yuri' className='col-span-3' />
+              </div>
             </div>
-            <div className='grid grid-cols-4 items-center gap-4'>
-              <Label htmlFor='username' className='text-right'>
-                Username
-              </Label>
-              <Input id='username' value='@peduarte' className='col-span-3' />
-            </div>
-          </div>
-          <SheetFooter>
-            <SheetClose asChild>
-              <Button type='submit'>Save changes</Button>
-            </SheetClose>
-          </SheetFooter>
-        </SheetContent>
-      </Sheet>
+            <SheetFooter>
+              <SheetClose asChild>
+                <Button type='submit'>Save changes</Button>
+              </SheetClose>
+            </SheetFooter>
+          </SheetContent>
+        </Sheet>
+      </div>
       <Button
         variant='outline'
         onClick={() =>
@@ -155,6 +169,57 @@ export function TestComponent() {
         }>
         Show Toast
       </Button>
+
+      <div className='p-10 my-10 w-full bg-pink-50'>
+        <Switch onClick={() => toast('Hey Yuri')} />
+        <Toggle className=''>toggle</Toggle>
+        <Label htmlFor='email'>Just a label</Label>
+        <Input className='mt-8'/>
+      </div>
+
+      <div className='p-10 my-10 w-full bg-gray-50'>
+        <div className='flex'>
+          <Tabs defaultValue='account' className='max-w-100'>
+            <TabsList>
+              <TabsTrigger value='account'>Account</TabsTrigger>
+              <TabsTrigger value='password'>Password</TabsTrigger>
+              <TabsTrigger value='test'>Test</TabsTrigger>
+              <TabsTrigger value='abc'>Abc</TabsTrigger>
+              <TabsTrigger value='123'>123</TabsTrigger>
+            </TabsList>
+            <TabsContent value='account'>Make changes to your account here.</TabsContent>
+            <TabsContent value='password'>Input password here</TabsContent>
+            <TabsContent value='test'>Testing here</TabsContent>
+            <TabsContent value='abc'>Content_ABC</TabsContent>
+            <TabsContent value='123'>Content_123</TabsContent>
+          </Tabs>
+        </div>
+      </div>
+
+      <div className='p-10 my-10 w-full bg-blue-50'>
+        <NavigationMenu>
+          <NavigationMenuList>
+            <NavigationMenuItem>
+              <NavigationMenuTrigger>Item One</NavigationMenuTrigger>
+              <NavigationMenuContent>
+                <NavigationMenuLink>
+                  <div className='w-[200px] h-[200px] border bg-red-50'></div>
+                </NavigationMenuLink>
+              </NavigationMenuContent>
+            </NavigationMenuItem>
+          </NavigationMenuList>
+        </NavigationMenu>
+      </div>
+      <div className='p-10 w-full bg-green-50'>
+        <TooltipProvider>
+          <Tooltip>
+            <TooltipTrigger>Hover</TooltipTrigger>
+            <TooltipContent>
+              <p>Add to library</p>
+            </TooltipContent>
+          </Tooltip>
+        </TooltipProvider>
+      </div>
     </>
   );
 }

@@ -3,8 +3,8 @@ import Navbar from './components/Layout/Navbar';
 import { Sidebar } from './components/Layout/Sidebar';
 import { Bottom } from './components/Layout/Bottom';
 import { useLocation } from 'react-router-dom';
-import { TooltipProvider } from './components/@shadcn/tooltip';
-import { Toaster } from './components/@shadcn/sonner';
+import { TooltipProvider } from './@shadcn/tooltip';
+import { Toaster } from './@shadcn/sonner';
 
 function App() {
   const location = useLocation();

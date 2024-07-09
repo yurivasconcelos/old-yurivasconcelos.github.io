@@ -1,7 +1,7 @@
 // eslint-disable-next-line @typescript-eslint/ban-ts-comment
 // @ts-nocheck
 import React, { useState, useEffect } from 'react';
-import { Button } from './@shadcn/button';
+import { Button } from '../@shadcn/button';
 
 
 export function Calendar() {

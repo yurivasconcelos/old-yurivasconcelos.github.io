@@ -1,9 +1,9 @@
 import { useState } from 'react';
-import { Tabs, TabsContent, TabsList, TabsTrigger } from './@shadcn/tabs';
-import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from './@shadcn/card';
-import { Button } from './@shadcn/button';
-import { Label } from './@shadcn/label';
-import { Input } from './@shadcn/input'
+import { Tabs, TabsContent, TabsList, TabsTrigger } from '../@shadcn/tabs';
+import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from '../@shadcn/card';
+import { Button } from '../@shadcn/button';
+import { Label } from '../@shadcn/label';
+import { Input } from '../@shadcn/input'
 
 export function TabComponent() {
   const [activeTab, setActiveTab] = useState(1);

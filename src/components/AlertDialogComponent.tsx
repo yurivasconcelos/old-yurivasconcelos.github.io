@@ -8,9 +8,9 @@ import {
   AlertDialogHeader,
   AlertDialogTitle,
   AlertDialogTrigger,
-} from './@shadcn/alert-dialog';
+} from '../@shadcn/alert-dialog';
 
-import { Button } from './@shadcn/button';
+import { Button } from '../@shadcn/button';
 
 export function AlertDialogDemo() {
   return (

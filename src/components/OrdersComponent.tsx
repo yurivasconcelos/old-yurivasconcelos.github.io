@@ -18,7 +18,7 @@ import {
   Truck,
   Users2,
 } from 'lucide-react';
-import { Badge } from './@shadcn/badge';
+import { Badge } from '../@shadcn/badge';
 import {
   Breadcrumb,
   BreadcrumbItem,
@@ -26,9 +26,9 @@ import {
   BreadcrumbList,
   BreadcrumbPage,
   BreadcrumbSeparator,
-} from './@shadcn/breadcrumb';
-import { Button } from './@shadcn/button';
-import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from './@shadcn/card';
+} from '../@shadcn/breadcrumb';
+import { Button } from '../@shadcn/button';
+import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from '../@shadcn/card';
 import {
   DropdownMenu,
   DropdownMenuCheckboxItem,
@@ -37,14 +37,14 @@ import {
   DropdownMenuLabel,
   DropdownMenuSeparator,
   DropdownMenuTrigger,
-} from './@shadcn/dropdown-menu';
-import { Input } from './@shadcn/input';
-import { Pagination, PaginationContent, PaginationItem } from './@shadcn/pagination';
-import { Progress } from './@shadcn/progress';
-import { Separator } from './@shadcn/separator';
-import { Sheet, SheetContent, SheetTrigger } from './@shadcn/sheet';
-import { Table, TableBody, TableCell, TableHead, TableHeader, TableRow } from './@shadcn/table';
-import { Tabs, TabsContent, TabsList, TabsTrigger } from './@shadcn/tabs';
+} from '../@shadcn/dropdown-menu';
+import { Input } from '../@shadcn/input';
+import { Pagination, PaginationContent, PaginationItem } from '../@shadcn/pagination';
+import { Progress } from '../@shadcn/progress';
+import { Separator } from '../@shadcn/separator';
+import { Sheet, SheetContent, SheetTrigger } from '../@shadcn/sheet';
+import { Table, TableBody, TableCell, TableHead, TableHeader, TableRow } from '../@shadcn/table';
+import { Tabs, TabsContent, TabsList, TabsTrigger } from '../@shadcn/tabs';
 // import { Tooltip, TooltipContent, TooltipTrigger } from './@shadcn/tooltip';
 
 export function OrdersComponent() {

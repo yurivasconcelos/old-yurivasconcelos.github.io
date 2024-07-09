@@ -4,6 +4,7 @@ import { Sidebar } from './components/Layout/Sidebar';
 import { Bottom } from './components/Layout/Bottom';
 import { useLocation } from 'react-router-dom';
 import { TooltipProvider } from './components/@shadcn/tooltip';
+import { Toaster } from './components/@shadcn/sonner';
 
 function App() {
   const location = useLocation();
@@ -12,6 +13,8 @@ function App() {
   return (
     <>
       <TooltipProvider>
+        <Toaster />
+
         <div className='flex flex-col h-screen'>
           <Navbar />
           <div className='flex flex-row flex-grow mt-16'>

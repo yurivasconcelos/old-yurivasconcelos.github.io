@@ -1,6 +1,8 @@
 import { BarChartIcon, BellIcon, HeartIcon, MixIcon, PersonIcon, QuoteIcon, SunIcon } from '@radix-ui/react-icons';
 import { Link } from 'react-router-dom';
 
+const iconsStyle = 'flex-shrink-0 w-5 h-5 text-gray-500 transition duration-75 dark:text-gray-400 group-hover:text-gray-900 dark:group-hover:text-white' 
+
 export function Sidebar() {
   return (
     <>
@@ -12,9 +14,9 @@ export function Sidebar() {
           <ul className='space-y-2 font-medium'>
             <li>
               <Link
-                to='#'
+                to='flex'
                 className='flex items-center p-2 text-gray-900 rounded-lg dark:text-white hover:bg-gray-100 dark:hover:bg-gray-700 group'>
-                <SunIcon />
+                <SunIcon className={iconsStyle}/>
                 <span className='ms-3'>Dashboard</span>
               </Link>
             </li>
@@ -22,7 +24,7 @@ export function Sidebar() {
               <Link
                 to='card'
                 className='flex items-center p-2 text-gray-900 rounded-lg dark:text-white hover:bg-gray-100 dark:hover:bg-gray-700 group'>
-                <MixIcon />
+                <MixIcon className={iconsStyle}/>
                 <span className='flex-1 ms-3 whitespace-nowrap'>Services</span>
                 <span className='inline-flex items-center justify-center px-2 ms-3 text-sm font-medium text-gray-800 bg-gray-100 rounded-full dark:bg-gray-700 dark:text-gray-300'>
                   Pro
@@ -31,10 +33,10 @@ export function Sidebar() {
             </li>
             <li>
               <Link
-                to='#'
+                to='dialog'
                 className='flex items-center p-2 text-gray-900 rounded-lg dark:text-white hover:bg-gray-100 dark:hover:bg-gray-700 group'>
-                <QuoteIcon />
-                <span className='flex-1 ms-3 whitespace-nowrap'>Test</span>
+                <QuoteIcon className={iconsStyle}/>
+                <span className='flex-1 ms-3 whitespace-nowrap'>Dialog</span>
                 <span className='inline-flex items-center justify-center w-3 h-3 p-3 ms-3 text-sm font-medium text-blue-800 bg-blue-100 rounded-full dark:bg-blue-900 dark:text-blue-300'>
                   3
                 </span>
@@ -42,16 +44,16 @@ export function Sidebar() {
             </li>
             <li>
               <Link
-                to='#'
-                className='flex items-center p-2 text-gray-900 rounded-lg dark:text-white hover:bg-gray-100 dark:hover:bg-gray-700 group'>
-                <PersonIcon />
+                to='tab'
+                className='flex items-center p-2  text-gray-900 rounded-lg dark:text-white hover:bg-gray-100 dark:hover:bg-gray-700 group'>
+                <PersonIcon  className={iconsStyle}/>
                 <span className='flex-1 ms-3 whitespace-nowrap'>Customers</span>
               </Link>
             </li>
             <li>
               <Link to='chart'
                 className='flex items-center p-2 text-gray-900 rounded-lg dark:text-white hover:bg-gray-100 dark:hover:bg-gray-700 group'>
-                <BarChartIcon />
+                <BarChartIcon  className={iconsStyle}/>
                 <span className='flex-1 ms-3 whitespace-nowrap'>Chart</span>
               </Link>
             </li>
@@ -67,7 +69,7 @@ export function Sidebar() {
               <a
                 href='#'
                 className='flex items-center p-2 text-gray-900 rounded-lg dark:text-white hover:bg-gray-100 dark:hover:bg-gray-700 group'>
-                <HeartIcon />
+                <HeartIcon  className={iconsStyle}/>
                 <span className='flex-1 ms-3 whitespace-nowrap'>Sign Up</span>
               </a>
             </li>

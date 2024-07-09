@@ -3,7 +3,7 @@ import ReactDOM from 'react-dom/client';
 import App from './App.tsx';
 import './index.css';
 import { createHashRouter, RouterProvider } from 'react-router-dom';
-import { HomeComponent } from './components/HomeComponent.tsx';
+import { AlertDialogDemo } from './components/AlertDialogComponent.tsx';
 import { TestComponent } from './components/TestComponent.tsx';
 import { CardComponent } from './components/CardComponent.tsx';
 import { SlackComponent } from './components/SlackComponent.tsx';
@@ -25,7 +25,7 @@ export const hashRouter = createHashRouter([
     element: <App />,
     children: [
       { path: '/', element: <LoginComponent /> },
-      { path: '/home', element: <HomeComponent /> },
+      { path: '/dialog', element: <AlertDialogDemo /> },
       { path: '/test', element: <TestComponent /> },
       { path: '/card', element: <CardComponent /> },
       { path: '/test/:id', element: <TestComponent /> },

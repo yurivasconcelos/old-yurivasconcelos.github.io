@@ -31,7 +31,7 @@ export function MarketingCard() {
                   <path
                     fillRule='evenodd'
                     d='M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z'
-                    clip-rule='evenodd'></path>
+                    clipRule='evenodd'></path>
                 </svg>
                 <span>Individual configuration</span>
               </li>
@@ -44,7 +44,7 @@ export function MarketingCard() {
                   <path
                     fillRule='evenodd'
                     d='M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z'
-                    clip-rule='evenodd'></path>
+                    clipRule='evenodd'></path>
                 </svg>
                 <span>No setup, or hidden fees</span>
               </li>
@@ -57,7 +57,7 @@ export function MarketingCard() {
                   <path
                     fillRule='evenodd'
                     d='M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z'
-                    clip-rule='evenodd'></path>
+                    clipRule='evenodd'></path>
                 </svg>
                 <span>
                   Team size: <span className='font-semibold'>1 developer</span>
@@ -72,7 +72,7 @@ export function MarketingCard() {
                   <path
                     fillRule='evenodd'
                     d='M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z'
-                    clip-rule='evenodd'></path>
+                    clipRule='evenodd'></path>
                 </svg>
                 <span>
                   Premium support: <span className='font-semibold'>6 months</span>
@@ -87,7 +87,7 @@ export function MarketingCard() {
                   <path
                     fillRule='evenodd'
                     d='M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z'
-                    clip-rule='evenodd'></path>
+                    clipRule='evenodd'></path>
                 </svg>
                 <span>
                   Free updates: <span className='font-semibold'>6 months</span>
@@ -119,7 +119,7 @@ export function MarketingCard() {
                   <path
                     fillRule='evenodd'
                     d='M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z'
-                    clip-rule='evenodd'></path>
+                    clipRule='evenodd'></path>
                 </svg>
                 <span>Individual configuration</span>
               </li>
@@ -132,7 +132,7 @@ export function MarketingCard() {
                   <path
                     fillRule='evenodd'
                     d='M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z'
-                    clip-rule='evenodd'></path>
+                    clipRule='evenodd'></path>
                 </svg>
                 <span>No setup, or hidden fees</span>
               </li>
@@ -145,7 +145,7 @@ export function MarketingCard() {
                   <path
                     fillRule='evenodd'
                     d='M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z'
-                    clip-rule='evenodd'></path>
+                    clipRule='evenodd'></path>
                 </svg>
                 <span>
                   Team size: <span className='font-semibold'>10 developers</span>
@@ -160,7 +160,7 @@ export function MarketingCard() {
                   <path
                     fillRule='evenodd'
                     d='M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z'
-                    clip-rule='evenodd'></path>
+                    clipRule='evenodd'></path>
                 </svg>
                 <span>
                   Premium support: <span className='font-semibold'>24 months</span>
@@ -175,7 +175,7 @@ export function MarketingCard() {
                   <path
                     fillRule='evenodd'
                     d='M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z'
-                    clip-rule='evenodd'></path>
+                    clipRule='evenodd'></path>
                 </svg>
                 <span>
                   Free updates: <span className='font-semibold'>24 months</span>
@@ -207,7 +207,7 @@ export function MarketingCard() {
                   <path
                     fillRule='evenodd'
                     d='M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z'
-                    clip-rule='evenodd'></path>
+                    clipRule='evenodd'></path>
                 </svg>
                 <span>Individual configuration</span>
               </li>
@@ -220,7 +220,7 @@ export function MarketingCard() {
                   <path
                     fillRule='evenodd'
                     d='M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z'
-                    clip-rule='evenodd'></path>
+                    clipRule='evenodd'></path>
                 </svg>
                 <span>No setup, or hidden fees</span>
               </li>
@@ -233,7 +233,7 @@ export function MarketingCard() {
                   <path
                     fillRule='evenodd'
                     d='M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z'
-                    clip-rule='evenodd'></path>
+                    clipRule='evenodd'></path>
                 </svg>
                 <span>
                   Team size: <span className='font-semibold'>100+ developers</span>
@@ -248,7 +248,7 @@ export function MarketingCard() {
                   <path
                     fillRule='evenodd'
                     d='M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z'
-                    clip-rule='evenodd'></path>
+                    clipRule='evenodd'></path>
                 </svg>
                 <span>
                   Premium support: <span className='font-semibold'>36 months</span>
@@ -263,7 +263,7 @@ export function MarketingCard() {
                   <path
                     fillRule='evenodd'
                     d='M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z'
-                    clip-rule='evenodd'></path>
+                    clipRule='evenodd'></path>
                 </svg>
                 <span>
                   Free updates: <span className='font-semibold'>36 months</span>

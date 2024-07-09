@@ -1,23 +1,24 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
-import App from './App.tsx';
+import App from './App';
 import './index.css';
 import { createHashRouter, RouterProvider } from 'react-router-dom';
-import { AlertDialogDemo } from './components/AlertDialogComponent.tsx';
-import { TestComponent } from './components/TestComponent.tsx';
-import { CardComponent } from './components/CardComponent.tsx';
-import { SlackComponent } from './components/SlackComponent.tsx';
-import { LoginComponent } from './components/LoginComponent.tsx';
-import { FormsComponent } from './components/FormsComponent.tsx';
-import { MarketingCard } from './components/MarketingCard.tsx';
-import { Calendar } from './components/Calendar.tsx';
-import { Chart } from './components/Chart.tsx';
-import { TabComponent } from './components/TabComponent.tsx';
-import { GridComponent } from './components/GridComponent.tsx';
-import { FormGridComponent } from './components/FormGridComponent.tsx';
-import { FlexComponent } from './components/FlexboxComponent.tsx';
-import Navbar from './components/Layout/Navbar.tsx';
-import { OrdersComponent } from './components/OrdersComponent.tsx';
+import { AlertDialogDemo } from './components/AlertDialogComponent';
+import { TestComponent } from './components/TestComponent';
+import { CardComponent } from './components/CardComponent';
+import { SlackComponent } from './components/SlackComponent';
+import { LoginComponent } from './components/LoginComponent';
+import { FormsComponent } from './components/FormsComponent';
+import { MarketingCard } from './components/MarketingCard';
+import { Calendar } from './components/Calendar';
+import { Chart } from './components/Chart';
+import { TabComponent } from './components/TabComponent';
+import { GridComponent } from './components/GridComponent';
+import { FormGridComponent } from './components/FormGridComponent';
+import { FlexComponent } from './components/FlexboxComponent';
+import Navbar from './components/Layout/Navbar';
+import { OrdersComponent } from './components/OrdersComponent';
+import { ShadcnTestComponent } from './components/ShadcnTestComponent';
 
 //why hashrouter https://stackoverflow.com/questions/71984401/react-router-not-working-with-github-pages
 export const hashRouter = createHashRouter([
@@ -42,6 +43,7 @@ export const hashRouter = createHashRouter([
       { path: '/navbar2', element: <Navbar /> },
       { path: '/chart', element: <Chart /> },
       { path: '/orders', element: <OrdersComponent /> },
+      { path: '/shadcn', element: <ShadcnTestComponent /> },
     ],
   },
 ]);

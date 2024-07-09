@@ -14,7 +14,6 @@ function App() {
     <>
       <TooltipProvider>
         <Toaster />
-
         <div className='flex flex-col h-screen'>
           <Navbar />
           <div className='flex flex-row flex-grow mt-16'>

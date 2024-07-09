@@ -17,6 +17,7 @@ import { GridComponent } from './components/GridComponent.tsx';
 import { FormGridComponent } from './components/FormGridComponent.tsx';
 import { FlexComponent } from './components/FlexboxComponent.tsx';
 import Navbar from './components/Layout/Navbar.tsx';
+import { OrdersComponent } from './components/OrdersComponent.tsx';
 
 //why hashrouter https://stackoverflow.com/questions/71984401/react-router-not-working-with-github-pages
 export const hashRouter = createHashRouter([
@@ -40,6 +41,7 @@ export const hashRouter = createHashRouter([
       { path: '/formgrid', element: <FormGridComponent /> },
       { path: '/navbar2', element: <Navbar /> },
       { path: '/chart', element: <Chart /> },
+      { path: '/orders', element: <OrdersComponent /> },
     ],
   },
 ]);

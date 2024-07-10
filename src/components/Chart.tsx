@@ -1,8 +1,8 @@
 //https://ui.shadcn.com/charts
 import { Bar, BarChart, CartesianGrid, XAxis } from 'recharts';
 import { Monitor } from 'lucide-react';
-import { Button } from '../@shadcn/button';
-import { ChartConfig, ChartContainer, ChartTooltip, ChartTooltipContent } from '../@shadcn/chart';
+import { Button } from '../@shadcn';
+import { ChartConfig, ChartContainer, ChartTooltip, ChartTooltipContent } from '../@shadcn';
 
 export function Chart() {
   const chartData = [

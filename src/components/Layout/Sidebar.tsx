@@ -1,8 +1,10 @@
 import { BarChartIcon, BellIcon, HeartIcon, MixIcon, PersonIcon, QuoteIcon, SunIcon } from '@radix-ui/react-icons';
 import { Link } from 'react-router-dom';
 
+
 const iconsStyle =
   'flex-shrink-0 w-6 h-6 text-slate-500 transition duration-75 dark:text-gray-400 group-hover:text-cyan-00 dark:group-hover:text-white';
+
 
 export function Sidebar() {
   return (

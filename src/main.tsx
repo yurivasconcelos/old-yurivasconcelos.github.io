@@ -19,6 +19,7 @@ import { FlexComponent } from './components/FlexboxComponent';
 import Navbar from './components/Layout/Navbar';
 import { OrdersComponent } from './components/OrdersComponent';
 import { ShadcnTestComponent } from './components/ShadcnTestComponent';
+import { ZForm } from './components/ZForm';
 
 //why hashrouter https://stackoverflow.com/questions/71984401/react-router-not-working-with-github-pages
 export const hashRouter = createHashRouter([
@@ -44,6 +45,7 @@ export const hashRouter = createHashRouter([
       { path: '/chart', element: <Chart /> },
       { path: '/orders', element: <OrdersComponent /> },
       { path: '/shadcn', element: <ShadcnTestComponent /> },
+      { path: '/zform', element: <ZForm /> },
     ],
   },
 ]);

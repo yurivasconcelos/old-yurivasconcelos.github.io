@@ -16,10 +16,11 @@ import { TabComponent } from './components/TabComponent';
 import { GridComponent } from './components/GridComponent';
 import { FormGridComponent } from './components/FormGridComponent';
 import { FlexComponent } from './components/FlexboxComponent';
-import Navbar from './components/Layout/Navbar';
+import Navbar from './pages/Layout/Navbar';
 import { OrdersComponent } from './components/OrdersComponent';
 import { ShadcnTestComponent } from './components/ShadcnTestComponent';
 import { ZForm } from './components/ZForm';
+import { CustomersPage } from './pages/CustomersPage';
 
 //why hashrouter https://stackoverflow.com/questions/71984401/react-router-not-working-with-github-pages
 export const hashRouter = createHashRouter([
@@ -28,6 +29,8 @@ export const hashRouter = createHashRouter([
     element: <App />,
     children: [
       { path: '/', element: <LoginComponent /> },
+
+      //tests
       { path: '/dialog', element: <AlertDialogDemo /> },
       { path: '/test', element: <TestComponent /> },
       { path: '/card', element: <CardComponent /> },
@@ -46,6 +49,8 @@ export const hashRouter = createHashRouter([
       { path: '/orders', element: <OrdersComponent /> },
       { path: '/shadcn', element: <ShadcnTestComponent /> },
       { path: '/zform', element: <ZForm /> },
+      //pages
+      { path: '/customers', element: <CustomersPage /> },
     ],
   },
 ]);

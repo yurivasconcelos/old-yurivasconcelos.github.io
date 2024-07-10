@@ -3,8 +3,7 @@ const localUrl = 'https://localhost:7004';
 const serverUrl = 'https://yurifx.azurewebsites.net';
 
 export function fetcher(isLocal: boolean = true, url: string) {
-  const baseURL = isLocal ? localUrl : serverUrl;
-  const endpoint = baseURL + url;
+  const endpoint = (isLocal ? localUrl : serverUrl) + url;
   const token = localStorage.getItem('token') ?? '';
 
   console.log(`sending get request to:${endpoint} with token ${token ?? `null`}`);
@@ -21,8 +20,7 @@ export function fetcher(isLocal: boolean = true, url: string) {
 }
 
 export function poster(isLocal: boolean = true, url: string, body: { [key: string]: unknown } | null) {
-  const baseURL = isLocal ? localUrl : serverUrl;
-  const endpoint = baseURL + url;
+  const endpoint = (isLocal ? localUrl : serverUrl) + url;
   const token = localStorage.getItem('token') ?? '';
   const bodyRequest = JSON.stringify(body);
 

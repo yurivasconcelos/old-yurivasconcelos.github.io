@@ -62,8 +62,8 @@
 @layer base {
   * {
     @apply border-border;
-    /* @apply border-solid border-2 border-orange-800; */
-    
+    /* @apply border-solid border-[0.5px] border-orange-800; */
+
   }
   body {
     @apply bg-background text-foreground;

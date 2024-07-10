@@ -51,6 +51,14 @@ export function Sidebar() {
             </li>
             <li>
               <Link
+                to='datatabledemo'
+                className='flex items-center p-2 text-gray-900 rounded-lg dark:text-white hover:bg-gray-100 dark:hover:bg-gray-700 group'>
+                <HeartIcon className={iconsStyle} />
+                <span className='flex-1 ms-3 whitespace-nowrap'>Data Table Demo</span>
+              </Link>
+            </li>
+            <li>
+              <Link
                 to='chart'
                 className='flex items-center p-2 text-gray-900 rounded-lg dark:text-white hover:bg-gray-100 dark:hover:bg-gray-700 group'>
                 <BarChartIcon className={iconsStyle} />
@@ -73,6 +81,7 @@ export function Sidebar() {
                 <span className='flex-1 ms-3 whitespace-nowrap'>Sign Up</span>
               </Link>
             </li>
+
           </ul>
         </div>
     </>

@@ -50,7 +50,7 @@ const customersDemo = [
 export function CustomersPage() {
   return (
     <>
-      <div className='flex-1 justify-center h-full pb-32'>
+      <div className='flex-1 justify-center h-full pb-52'>
         <div className='p-2 lg:p-8 h-20'>
           <Breadcrumb className='flex'>
             <BreadcrumbList>
@@ -71,7 +71,7 @@ export function CustomersPage() {
               </BreadcrumbItem>
             </BreadcrumbList>
           </Breadcrumb>
-          <div className='pt-6'>
+          <div className='pt-6 pb-20'>
             <div className='relative flex-1 md:grow-0'>
               <Search className='absolute left-2.5 top-2.5 h-4 w-4 text-muted-foreground' />
               <Input

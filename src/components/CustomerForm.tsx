@@ -27,13 +27,13 @@ export function CustomerForm() {
   return (
     <>
       <Form {...form}>
-        <form onSubmit={form.handleSubmit(onSubmit)} className='flex space-y-4'>
-          <div className='flex form'>
+        <form onSubmit={form.handleSubmit(onSubmit)} className=''>
+          <div id='customerForm' className='grid grid-cols-1 md:grid-cols-2 justify-stretch gap-2'>
             <FormField
               control={form.control}
               name='name'
               render={({ field }) => (
-                <FormItem>
+                <FormItem className=''>
                   <FormLabel>Nome</FormLabel>
                   <FormControl>
                     <Input placeholder='' {...field} />
@@ -56,7 +56,6 @@ export function CustomerForm() {
               )}
             />
           </div>
-
           <Button type='submit'>Salvar</Button>
         </form>
       </Form>

@@ -46,7 +46,7 @@ export function CustomerForm() {
           <Tabs defaultValue='info'>
             <TabsList className='grid w-full grid-cols-2'>
               <TabsTrigger value='info'>Dados</TabsTrigger>
-              <TabsTrigger value='additional'>Informacoes adicionais</TabsTrigger>
+              <TabsTrigger value='additional'>Adicionais</TabsTrigger>
             </TabsList>
             <TabsContent value='info'>
               <div id='customerForm' className='grid grid-cols-1 md:grid-cols-2 justify-stretch gap-4'>

@@ -121,7 +121,7 @@ export function CustomersPage() {
                             <span className='sr-only sm:not-sr-only sm:whitespace-nowrap'>Add Customer</span>
                           </Button>
                         </SheetTrigger>
-                        <SheetContent side='right' className='w-[480px] lg:min-w-[40%]'>
+                        <SheetContent side='right' className='lg:min-w-[40%]'>
                           <SheetHeader>
                             <SheetTitle>Create new customer</SheetTitle>
                             <SheetDescription>

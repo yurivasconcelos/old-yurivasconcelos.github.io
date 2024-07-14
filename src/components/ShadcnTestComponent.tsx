@@ -231,7 +231,7 @@ export function ShadcnTestComponent() {
           <SheetTrigger>
             <Button variant='outline'>Open right panel medium</Button>
           </SheetTrigger>
-          <SheetContent side='right' className='w-[380px] lg:min-w-[600px]'>
+          <SheetContent side='right' className='w-[480px] lg:min-w-[70%]'>
             <SheetHeader>
               <SheetTitle>Edit profile</SheetTitle>
               <SheetDescription>Make changes to your profile here. Click save when you're done.</SheetDescription>

@@ -22,6 +22,11 @@ import {
   DropdownMenuSeparator,
   DropdownMenuTrigger,
   Input,
+  SheetContent,
+  SheetDescription,
+  SheetHeader,
+  SheetTitle,
+  SheetTrigger,
   Table,
   TableBody,
   TableCell,
@@ -31,9 +36,11 @@ import {
   Tabs,
   TabsContent,
   TabsList,
+  Sheet,
   TabsTrigger,
 } from '../@shadcn';
 import { File, ListFilter, MoreHorizontal, PlusCircle, Search } from 'lucide-react';
+import { CustomerForm } from '../components/CustomerForm';
 
 const customersDemo = [
   { name: 'Yuri Eduardo', status: 'Success', price: '$30.20', totalSales: 50, createdAt: '20-20-2021' },
@@ -107,15 +114,24 @@ export function CustomersPage() {
                         <DropdownMenuCheckboxItem>Archived</DropdownMenuCheckboxItem>
                       </DropdownMenuContent>
                     </DropdownMenu>
-                    <Button size='sm' variant='outline' className='h-7 gap-1'>
-                      <File className='h-3.5 w-3.5' />
-                      <span className='sr-only sm:not-sr-only sm:whitespace-nowrap'>Export</span>
-                    </Button>
-                    <Button size='sm' className='h-7 gap-1'>
-                      <PlusCircle className='h-3.5 w-3.5' />
-                      <span className='sr-only sm:not-sr-only sm:whitespace-nowrap'>Add Product</span>
-                    </Button>
-                  </div>
+
+                      <Sheet>
+                        <SheetTrigger>
+                          <Button size='sm' className='h-7 gap-1'>
+                            <PlusCircle className='h-3.5 w-3.5' />
+                            <span className='sr-only sm:not-sr-only sm:whitespace-nowrap'>Add Customer</span>
+                          </Button>
+                        </SheetTrigger>
+                        <SheetContent side='right' className='w-[480px] lg:min-w-[60%]'>
+                          <SheetHeader>
+                            <SheetTitle>Create new customer</SheetTitle>
+                            <SheetDescription>
+                              <CustomerForm/>
+                            </SheetDescription>
+                          </SheetHeader>
+                        </SheetContent>
+                      </Sheet>
+                    </div>
                 </div>
                 <TabsContent value='all'>
                   <Card>
@@ -141,50 +157,19 @@ export function CustomersPage() {
                           </TableRow>
                         </TableHeader>
                         <TableBody>
-                          <TableRow>
-                            {/* <TableCell className='hidden sm:table-cell'>
-                              <img
-                                alt='Product image'
-                                className='aspect-square rounded-md object-cover'
-                                height='64'
-                                src='/placeholder.svg'
-                                width='64'
-                              />
-                            </TableCell> */}
-                            <TableCell className='font-medium'>Laser Lemonade Machine</TableCell>
-                            <TableCell>
-                              <Badge className='bg-red-200' variant='outline'>
-                                Draft
-                              </Badge>
-                            </TableCell>
-                            <TableCell>$499.99</TableCell>
-                            <TableCell className='hidden md:table-cell'>25</TableCell>
-                            <TableCell className='hidden md:table-cell'>2023-07-12 10:42 AM</TableCell>
-                            <TableCell>
-                              <DropdownMenu>
-                                <DropdownMenuTrigger asChild>
-                                  <Button aria-haspopup='true' size='icon' variant='ghost'>
-                                    <MoreHorizontal className='h-4 w-4' />
-                                    <span className='sr-only'>Toggle menu</span>
-                                  </Button>
-                                </DropdownMenuTrigger>
-                                <DropdownMenuContent align='end'>
-                                  <DropdownMenuLabel>Actions</DropdownMenuLabel>
-                                  <DropdownMenuItem>Edit</DropdownMenuItem>
-                                  <DropdownMenuItem>Delete</DropdownMenuItem>
-                                </DropdownMenuContent>
-                              </DropdownMenu>
-                            </TableCell>
-                          </TableRow>
-
                           {customersDemo.map((customer) => (
                             <>
                               <TableRow>
                                 <TableCell className='font-medium'>{customer.name}</TableCell>
                                 <TableCell>
                                   <Badge
-                                    className={customer.status == 'Pending' ? 'bg-red-200' : 
-                                      customer.status == "Draft" ? 'bg-pink-50' : 'bg-green-50'}
+                                    className={
+                                      customer.status == 'Pending'
+                                        ? 'bg-red-200'
+                                        : customer.status == 'Draft'
+                                        ? 'bg-pink-50'
+                                        : 'bg-green-50'
+                                    }
                                     variant='secondary'>
                                     {customer.status}
                                   </Badge>

@@ -22,23 +22,20 @@ export const columns: ColumnDef<Payment>[] = [
     accessorKey: "email",
     header: "Email",
   },
-  {
-    accessorKey: "amount",
-    header: "Amount",
-  },
+  
 
   //formatting
   {
     accessorKey: "amount",
-    header: () => <div className="text-right">Amount</div>,
+    header: () => <div className="text-center">Amount</div>,
     cell: ({ row }) => {
       const amount = parseFloat(row.getValue("amount"))
-      const formatted = new Intl.NumberFormat("en-US", {
+      const formatted = new Intl.NumberFormat("pt-BR", {
         style: "currency",
-        currency: "USD",
+        currency: "BRL",
       }).format(amount)
  
-      return <div className="text-right font-medium">{formatted}</div>
+      return <div className="text-center font-medium">{formatted}</div>
     },
   },
   //sorting

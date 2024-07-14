@@ -3,7 +3,6 @@ import { zodResolver } from '@hookform/resolvers/zod';
 import { useForm } from 'react-hook-form';
 import {
   Button,
-  Card,
   Input,
   Form,
   FormField,
@@ -15,6 +14,7 @@ import {
   TabsList,
   TabsTrigger,
   TabsContent,
+  Textarea,
 } from '../@shadcn';
 
 const formSchema = z.object({
@@ -22,6 +22,7 @@ const formSchema = z.object({
     message: 'Invalido.',
   }),
   lastName: z.string(),
+  address: z.string().optional(),
 });
 
 export function CustomerForm() {
@@ -30,6 +31,7 @@ export function CustomerForm() {
     defaultValues: {
       name: '',
       lastName: '',
+      address: ''
     },
   });
 
@@ -76,9 +78,26 @@ export function CustomerForm() {
                 />
               </div>
             </TabsContent>
+            <TabsContent value='additional'>
+              <div id='customerForm' className='grid grid-cols-1 justify-stretch gap-4'>
+                <FormField
+                  control={form.control}
+                  name='address'
+                  render={({ field }) => (
+                    <FormItem>
+                      <FormLabel>Endereco</FormLabel>
+                      <FormControl>
+                        <Textarea placeholder='Address' {...field} />
+                      </FormControl>
+                      <FormMessage />
+                    </FormItem>
+                  )}
+                />
+              </div>
+            </TabsContent>
           </Tabs>
 
-          <Button className='pt-3' type='submit'>
+          <Button className='mt-3' type='submit'>
             Salvar
           </Button>
         </form>

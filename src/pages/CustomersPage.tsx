@@ -114,6 +114,7 @@ export function CustomersPage() {
                         <DropdownMenuCheckboxItem>Archived</DropdownMenuCheckboxItem>
                       </DropdownMenuContent>
                     </DropdownMenu>
+
                       <Sheet>
                         <SheetTrigger>
                           <Button size='sm' className='h-7 gap-1'>

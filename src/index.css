@@ -62,7 +62,7 @@
 @layer base {
   * {
     @apply border-border;
-    /* @apply border-solid border-[0.5px] border-green-200; */
+    /* @apply border-solid border-[0.5px] border-red-200; */
 
   }
   body {

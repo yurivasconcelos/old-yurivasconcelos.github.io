@@ -2,7 +2,7 @@ import { z } from 'zod';
 import { zodResolver } from '@hookform/resolvers/zod';
 import { useForm } from 'react-hook-form';
 import { Button, Input, Form, FormField, FormItem, FormLabel, FormControl, FormMessage } from '../@shadcn';
-import { TabComponent } from './TabComponent';
+// import { TabComponent } from './TabComponent';
 
 const formSchema = z.object({
   name: z.string().min(2, {
@@ -28,12 +28,12 @@ export function CustomerForm() {
     <>
       <Form {...form}>
         <form onSubmit={form.handleSubmit(onSubmit)} className=''>
-          <div id='customerForm' className='grid grid-cols-1 md:grid-cols-2 justify-stretch gap-2'>
+          <div id='customerForm' className='grid grid-cols-1 md:grid-cols-2 justify-stretch gap-4'>
             <FormField
               control={form.control}
               name='name'
               render={({ field }) => (
-                <FormItem className=''>
+                <FormItem className='bg-green-50'>
                   <FormLabel>Nome</FormLabel>
                   <FormControl>
                     <Input placeholder='' {...field} />
@@ -56,7 +56,7 @@ export function CustomerForm() {
               )}
             />
           </div>
-          <Button type='submit'>Salvar</Button>
+          <Button className='pt-3' type='submit'>Salvar</Button>
         </form>
       </Form>
     </>

@@ -39,7 +39,7 @@ import {
   Sheet,
   TabsTrigger,
 } from '../@shadcn';
-import { File, ListFilter, MoreHorizontal, PlusCircle, Search } from 'lucide-react';
+import { ListFilter, MoreHorizontal, PlusCircle, Search } from 'lucide-react';
 import { CustomerForm } from '../components/CustomerForm';
 
 const customersDemo = [
@@ -59,7 +59,7 @@ export function CustomersPage() {
     <>
       <div className='flex-1 justify-center h-full pb-52'>
         <div className='p-2 lg:p-8 h-20'>
-          <Breadcrumb className='flex'>
+          <Breadcrumb>
             <BreadcrumbList>
               <BreadcrumbItem>
                 <BreadcrumbLink asChild>

@@ -26,12 +26,17 @@ const formSchema = z.object({
 });
 
 export function CustomerForm() {
+  const formInputClass =
+    'bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-md focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5';
+
+  const formLabelClass = 'block mb-2 text-sm font-bold text-gray-900';
+
   const form = useForm<z.infer<typeof formSchema>>({
     resolver: zodResolver(formSchema),
     defaultValues: {
       name: '',
       lastName: '',
-      address: ''
+      address: '',
     },
   });
 
@@ -55,9 +60,9 @@ export function CustomerForm() {
                   name='name'
                   render={({ field }) => (
                     <FormItem>
-                      <FormLabel>Nome</FormLabel>
+                      <FormLabel className={formLabelClass}>Nome</FormLabel>
                       <FormControl>
-                        <Input placeholder='' {...field} />
+                        <Input className={formInputClass} placeholder='' {...field} />
                       </FormControl>
                       <FormMessage />
                     </FormItem>
@@ -68,9 +73,9 @@ export function CustomerForm() {
                   name='lastName'
                   render={({ field }) => (
                     <FormItem>
-                      <FormLabel>Sobrenome</FormLabel>
+                      <FormLabel className={formLabelClass}>Sobrenome</FormLabel>
                       <FormControl>
-                        <Input placeholder='' {...field} />
+                        <Input className={formInputClass} {...field} />
                       </FormControl>
                       <FormMessage />
                     </FormItem>
@@ -85,7 +90,7 @@ export function CustomerForm() {
                   name='address'
                   render={({ field }) => (
                     <FormItem>
-                      <FormLabel>Endereco</FormLabel>
+                      <FormLabel className='font-semibold text-gray-900'>Endereco</FormLabel>
                       <FormControl>
                         <Textarea placeholder='Address' {...field} />
                       </FormControl>

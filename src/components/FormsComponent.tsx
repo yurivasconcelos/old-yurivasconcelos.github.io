@@ -94,7 +94,7 @@ export function FormsComponent() {
           <form>
             <div className='grid gap-6 mb-6 md:grid-cols-2'>
               <div>
-                <label htmlFor='first_name' className='block mb-2 text-sm font-medium text-gray-900  '>
+                <label htmlFor='first_name' className='block mb-2 text-sm font-medium text-gray-900'>
                   First name
                 </label>
                 <input

@@ -63,7 +63,7 @@ export function CustomersPage() {
                 className='w-full rounded-lg bg-background pl-8 md:w-[600px] lg:w-[620px]'
               />
             </div>
-              <Tabs defaultValue='all'>
+              <Tabs className='mt-2 lg:mt-4' defaultValue='all'>
                 <div className='flex items-center'>
                   <TabsList>
                     <TabsTrigger value='all'>All</TabsTrigger>

@@ -130,7 +130,7 @@ export function getData(): Customer[] {
       lastName: 'Menozzi',
       status: 'Pending',
       amount: 200,
-      email: 'priscila_menozzi@hotmail.com',
+      email: 'priscila@hotmail.com',
     },
   ];
 }

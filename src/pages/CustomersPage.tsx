@@ -63,7 +63,6 @@ export function CustomersPage() {
                 className='w-full rounded-lg bg-background pl-8 md:w-[600px] lg:w-[620px]'
               />
             </div>
-            <main className='grid flex-1 items-start gap-0 pt-4 sm:pt-6 md:gap-0'>
               <Tabs defaultValue='all'>
                 <div className='flex items-center'>
                   <TabsList>
@@ -113,7 +112,6 @@ export function CustomersPage() {
                   <CustomersDatatable />
                 </TabsContent>
               </Tabs>
-            </main>
           </div>
         </div>
       </div>

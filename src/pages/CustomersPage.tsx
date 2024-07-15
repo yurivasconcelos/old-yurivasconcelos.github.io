@@ -40,7 +40,8 @@ import {
   TabsTrigger,
 } from '../@shadcn';
 import { ListFilter, MoreHorizontal, PlusCircle, Search } from 'lucide-react';
-import { CustomerForm } from '../components/CustomerForm';
+import { CustomerForm } from '../components/customers/CustomerForm';
+import { CustomersDatatable } from '../components/customers/CustomersDatatable';
 
 const customersDemo = [
   { name: 'Yuri Eduardo', status: 'Success', price: '$30.20', totalSales: 50, createdAt: '20-20-2021' },
@@ -115,24 +116,27 @@ export function CustomersPage() {
                       </DropdownMenuContent>
                     </DropdownMenu>
 
-                      <Sheet>
-                        <SheetTrigger>
-                          <Button size='sm' className='h-7 gap-1'>
-                            <PlusCircle className='h-3.5 w-3.5' />
-                            <span className='sr-only sm:not-sr-only sm:whitespace-nowrap'>Add Customer</span>
-                          </Button>
-                        </SheetTrigger>
-                        <SheetContent side='right' className='lg:min-w-[40%]'>
-                          <SheetHeader>
-                            <SheetTitle>Create new customer</SheetTitle>
-                            <SheetDescription>
-                              <CustomerForm/>
-                            </SheetDescription>
-                          </SheetHeader>
-                        </SheetContent>
-                      </Sheet>
-                    </div>
+                    <Sheet>
+                      <SheetTrigger>
+                        <Button size='sm' className='h-7 gap-1'>
+                          <PlusCircle className='h-3.5 w-3.5' />
+                          <span className='sr-only sm:not-sr-only sm:whitespace-nowrap'>Add Customer</span>
+                        </Button>
+                      </SheetTrigger>
+                      <SheetContent side='right' className='lg:min-w-[40%]'>
+                        <SheetHeader>
+                          <SheetTitle>Create new customer</SheetTitle>
+                          <SheetDescription>
+                            <CustomerForm />
+                          </SheetDescription>
+                        </SheetHeader>
+                      </SheetContent>
+                    </Sheet>
+                  </div>
                 </div>
+                <TabsContent value='all'>
+                  <CustomersDatatable />
+                </TabsContent>
                 <TabsContent value='all'>
                   <Card>
                     <CardHeader>

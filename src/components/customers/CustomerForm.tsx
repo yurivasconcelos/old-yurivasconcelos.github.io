@@ -15,7 +15,8 @@ import {
   TabsTrigger,
   TabsContent,
   Textarea,
-} from '../@shadcn';
+} from '../../@shadcn';
+
 
 const formSchema = z.object({
   name: z.string().min(2, {
@@ -26,10 +27,7 @@ const formSchema = z.object({
 });
 
 export function CustomerForm() {
-  const formInputClass =
-    'bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-md focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5';
 
-  const formLabelClass = 'block mb-2 text-sm font-bold text-gray-900';
 
   const form = useForm<z.infer<typeof formSchema>>({
     resolver: zodResolver(formSchema),
@@ -54,15 +52,15 @@ export function CustomerForm() {
               <TabsTrigger value='additional'>Adicionais</TabsTrigger>
             </TabsList>
             <TabsContent value='info'>
-              <div id='customerForm' className='grid grid-cols-1 md:grid-cols-2 justify-stretch gap-4'>
+              <div id='customerForm' className='grid grid-cols-1 md:grid-cols-2 justify-stretch gap-4 xl:gap-8'>
                 <FormField
                   control={form.control}
                   name='name'
                   render={({ field }) => (
                     <FormItem>
-                      <FormLabel className={formLabelClass}>Nome</FormLabel>
+                      <FormLabel>Nome</FormLabel>
                       <FormControl>
-                        <Input className={formInputClass} placeholder='' {...field} />
+                        <Input {...field} />
                       </FormControl>
                       <FormMessage />
                     </FormItem>
@@ -73,9 +71,9 @@ export function CustomerForm() {
                   name='lastName'
                   render={({ field }) => (
                     <FormItem>
-                      <FormLabel className={formLabelClass}>Sobrenome</FormLabel>
+                      <FormLabel >Sobrenome</FormLabel>
                       <FormControl>
-                        <Input className={formInputClass} {...field} />
+                        <Input  {...field} />
                       </FormControl>
                       <FormMessage />
                     </FormItem>

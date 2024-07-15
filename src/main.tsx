@@ -14,7 +14,6 @@ import { Calendar } from './components/Calendar';
 import { Chart } from './components/Chart';
 import { TabComponent } from './components/TabComponent';
 import { GridComponent } from './components/GridComponent';
-import { FormGridComponent } from './components/FormGridComponent';
 import { FlexComponent } from './components/FlexboxComponent';
 import Navbar from './pages/Layout/Navbar';
 import { OrdersComponent } from './components/OrdersComponent';
@@ -44,7 +43,6 @@ export const hashRouter = createHashRouter([
       { path: '/calendar', element: <Calendar /> },
       { path: '/tab', element: <TabComponent /> },
       { path: '/grid', element: <GridComponent /> },
-      { path: '/formgrid', element: <FormGridComponent /> },
       { path: '/navbar2', element: <Navbar /> },
       { path: '/chart', element: <Chart /> },
       { path: '/orders', element: <OrdersComponent /> },

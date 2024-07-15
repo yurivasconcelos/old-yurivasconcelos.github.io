@@ -29,7 +29,6 @@ import { ListFilter, PlusCircle, Search } from 'lucide-react';
 import { CustomerForm } from '../components/customers/CustomerForm';
 import { CustomersDatatable } from '../components/customers/CustomersDatatable';
 
-
 export function CustomersPage() {
   return (
     <>
@@ -63,55 +62,56 @@ export function CustomersPage() {
                 className='w-full rounded-lg bg-background pl-8 md:w-[600px] lg:w-[620px]'
               />
             </div>
-              <Tabs className='mt-2 lg:mt-4' defaultValue='all'>
-                <div className='flex items-center'>
-                  <TabsList>
-                    <TabsTrigger value='all'>All</TabsTrigger>
-                    <TabsTrigger value='active'>Active</TabsTrigger>
-                    <TabsTrigger value='draft'>Draft</TabsTrigger>
-                    <TabsTrigger value='archived' className='hidden sm:flex'>
-                      Archived
-                    </TabsTrigger>
-                  </TabsList>
-                  <div className='ml-auto flex items-center gap-2'>
-                    <DropdownMenu>
-                      <DropdownMenuTrigger asChild>
-                        <Button variant='outline' size='sm' className='h-7 gap-1'>
-                          <ListFilter className='h-3.5 w-3.5' />
-                          <span className='sr-only sm:not-sr-only sm:whitespace-nowrap'>Filter</span>
-                        </Button>
-                      </DropdownMenuTrigger>
-                      <DropdownMenuContent align='end'>
-                        <DropdownMenuLabel>Filter by</DropdownMenuLabel>
-                        <DropdownMenuSeparator />
-                        <DropdownMenuCheckboxItem checked>Active</DropdownMenuCheckboxItem>
-                        <DropdownMenuCheckboxItem>Draft</DropdownMenuCheckboxItem>
-                        <DropdownMenuCheckboxItem>Archived</DropdownMenuCheckboxItem>
-                      </DropdownMenuContent>
-                    </DropdownMenu>
+            <Tabs className='mt-2 lg:mt-4' defaultValue='all'>
+              <div className='flex items-center'>
+                <TabsList>
+                  <TabsTrigger asChild value='all'>
+                    All
+                  </TabsTrigger>
+                  <TabsTrigger value='active'>Active</TabsTrigger>
+                  <TabsTrigger value='draft'>Draft</TabsTrigger>
+                  <TabsTrigger value='archived' className='hidden sm:flex'>
+                    Archived
+                  </TabsTrigger>
+                </TabsList>
+                <div className='ml-auto flex items-center gap-2'>
+                  <DropdownMenu>
+                    <DropdownMenuTrigger asChild>
+                      <Button variant='outline' size='sm' className='h-7 gap-1'>
+                        <ListFilter className='h-3.5 w-3.5' />
+                        <span className='sr-only sm:not-sr-only sm:whitespace-nowrap'>Filter</span>
+                      </Button>
+                    </DropdownMenuTrigger>
+                    <DropdownMenuContent align='end'>
+                      <DropdownMenuLabel>Filter by</DropdownMenuLabel>
+                      <DropdownMenuSeparator />
+                      <DropdownMenuCheckboxItem checked>Active</DropdownMenuCheckboxItem>
+                      <DropdownMenuCheckboxItem>Draft</DropdownMenuCheckboxItem>
+                      <DropdownMenuCheckboxItem>Archived</DropdownMenuCheckboxItem>
+                    </DropdownMenuContent>
+                  </DropdownMenu>
 
-                    <Sheet>
-                      <SheetTrigger>
-                        <Button size='sm' className='h-7 gap-1'>
-                          <PlusCircle className='h-3.5 w-3.5' />
-                          <span className='sr-only sm:not-sr-only sm:whitespace-nowrap'>Add Customer</span>
-                        </Button>
-                      </SheetTrigger>
-                      <SheetContent side='right' className='lg:min-w-[40%]'>
-                        <SheetHeader>
-                          <SheetTitle>Create new customer</SheetTitle>
-                          <SheetDescription>
-                            <CustomerForm />
-                          </SheetDescription>
-                        </SheetHeader>
-                      </SheetContent>
-                    </Sheet>
-                  </div>
+                  <Sheet>
+                    <SheetTrigger asChild>
+                      <Button size='sm' className='h-7 gap-1'>
+                        <PlusCircle className='h-3.5 w-3.5' />
+                        <span className='sr-only sm:not-sr-only sm:whitespace-nowrap'>Add Customer</span>
+                      </Button>
+                    </SheetTrigger>
+                    <SheetContent side='right' className='lg:min-w-[40%]'>
+                      <SheetHeader>
+                        <SheetTitle>Create new customer</SheetTitle>
+                        <SheetDescription>This is a description</SheetDescription>
+                      </SheetHeader>
+                      <CustomerForm />
+                    </SheetContent>
+                  </Sheet>
                 </div>
-                <TabsContent value='all'>
-                  <CustomersDatatable />
-                </TabsContent>
-              </Tabs>
+              </div>
+              <TabsContent value='all'>
+                <CustomersDatatable />
+              </TabsContent>
+            </Tabs>
           </div>
         </div>
       </div>

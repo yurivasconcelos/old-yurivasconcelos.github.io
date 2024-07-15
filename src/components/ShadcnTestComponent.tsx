@@ -333,7 +333,7 @@ export function ShadcnTestComponent() {
       <div className='p-10 w-full bg-green-50'>
         <TooltipProvider>
           <Tooltip>
-            <TooltipTrigger>Hover</TooltipTrigger>
+            <TooltipTrigger asChild>Hover</TooltipTrigger>
             <TooltipContent>
               <p>Add to library</p>
             </TooltipContent>

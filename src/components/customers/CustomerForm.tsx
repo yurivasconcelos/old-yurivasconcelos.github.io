@@ -17,7 +17,6 @@ import {
   Textarea,
 } from '../../@shadcn';
 
-
 const formSchema = z.object({
   name: z.string().min(2, {
     message: 'Invalido.',
@@ -27,8 +26,6 @@ const formSchema = z.object({
 });
 
 export function CustomerForm() {
-
-
   const form = useForm<z.infer<typeof formSchema>>({
     resolver: zodResolver(formSchema),
     defaultValues: {
@@ -71,9 +68,9 @@ export function CustomerForm() {
                   name='lastName'
                   render={({ field }) => (
                     <FormItem>
-                      <FormLabel >Sobrenome</FormLabel>
+                      <FormLabel>Sobrenome</FormLabel>
                       <FormControl>
-                        <Input  {...field} />
+                        <Input {...field} />
                       </FormControl>
                       <FormMessage />
                     </FormItem>
@@ -99,8 +96,7 @@ export function CustomerForm() {
               </div>
             </TabsContent>
           </Tabs>
-
-          <Button className='mt-3' type='submit'>
+          <Button className='mt-3 w-full' type='submit'>
             Salvar
           </Button>
         </form>

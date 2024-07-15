@@ -1,5 +1,5 @@
 //use local?
-const localUrl = 'https://localhost:7004';
+const localUrl = 'https://localhost:44354';
 const serverUrl = 'https://yurifx.azurewebsites.net';
 
 export function fetcher(isLocal: boolean = true, url: string) {

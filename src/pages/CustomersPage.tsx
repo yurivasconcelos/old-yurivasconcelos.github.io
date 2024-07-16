@@ -24,6 +24,14 @@ import {
   TabsList,
   Sheet,
   TabsTrigger,
+  Dialog,
+  DialogContent,
+  DialogDescription,
+  DialogFooter,
+  DialogHeader,
+  DialogTitle,
+  DialogTrigger,
+  Label,
 } from '../@shadcn';
 import { ListFilter, PlusCircle, Search } from 'lucide-react';
 import { CustomerForm } from '../components/customers/CustomerForm';
@@ -91,6 +99,39 @@ export function CustomersPage() {
                     </DropdownMenuContent>
                   </DropdownMenu>
 
+                  <Dialog >
+                    <DialogTrigger asChild>
+                      <Button variant='outline'>Add Customer</Button>
+                    </DialogTrigger>
+                    <DialogContent className='min-w-64 min-h-[70%]'>
+                      <DialogHeader>
+                        <DialogTitle>Add customer</DialogTitle>
+                        {/* <DialogDescription>
+                          Make changes to your profile here. Click save when you're done.
+                        </DialogDescription> */}
+                      </DialogHeader>
+                      {/* <div className='grid gap-4 py-4'>
+                        <div className='grid grid-cols-4 items-center gap-4'>
+                          <Label htmlFor='name' className='text-right'>
+                            Name
+                          </Label>
+                          <Input id='name' value='Pedro Duarte' className='col-span-3' />
+                        </div>
+                        <div className='grid grid-cols-4 items-center gap-4'>
+                          <Label htmlFor='username' className='text-right'>
+                            Username
+                          </Label>
+                          <Input id='username' value='@peduarte' className='col-span-3' />
+                        </div>
+                      </div> */}
+                      <CustomerForm />
+
+                      <DialogFooter>
+                        <Button type='submit'>Save changes</Button>
+                      </DialogFooter>
+                    </DialogContent>
+                  </Dialog>
+
                   <Sheet>
                     <SheetTrigger asChild>
                       <Button size='sm' className='h-7 gap-1'>
@@ -103,6 +144,7 @@ export function CustomersPage() {
                         <SheetTitle>Create new customer</SheetTitle>
                         <SheetDescription>This is a description</SheetDescription>
                       </SheetHeader>
+
                       <CustomerForm />
                     </SheetContent>
                   </Sheet>

@@ -1,10 +1,10 @@
 //use local?
-const localUrl = 'https://localhost:7004';
-const serverUrl = 'https://yurifx.azurewebsites.net';
+// const url = 'https://localhost:7004';
+const baseUrl = 'https://yurifx.azurewebsites.net';
+const token = localStorage.getItem('token') ?? '';
 
-export function fetcher(isLocal: boolean = true, url: string) {
-  const endpoint = (isLocal ? localUrl : serverUrl) + url;
-  const token = localStorage.getItem('token') ?? '';
+export function fetcher(url: string) {
+  const endpoint = baseUrl + url;
 
   console.log(`sending get request to:${endpoint} with token ${token ?? `null`}`);
 
@@ -19,9 +19,10 @@ export function fetcher(isLocal: boolean = true, url: string) {
     .catch((err) => console.log(err));
 }
 
-export function poster(isLocal: boolean = true, url: string, body: { [key: string]: unknown } | null) {
-  const endpoint = (isLocal ? localUrl : serverUrl) + url;
-  const token = localStorage.getItem('token') ?? '';
+
+
+export function poster(url: string, body: { [key: string]: unknown } | null) {
+  const endpoint = baseUrl + url;
   const bodyRequest = JSON.stringify(body);
 
   console.log(`sending post request to:${endpoint} with body ${bodyRequest} and token ${token ?? `null`}`);
@@ -38,6 +39,4 @@ export function poster(isLocal: boolean = true, url: string, body: { [key: strin
     .catch((err) => console.log(err));
 }
 
-export const getTest = (isLocal: boolean) => () => fetcher(isLocal, '/test');
-
-export const getGoogle = (isLocal: boolean) => () => fetcher(isLocal, '/test/google');
+export const getTest = () => fetcher('/test');

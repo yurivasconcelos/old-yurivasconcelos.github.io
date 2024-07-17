@@ -21,6 +21,8 @@ import { ShadcnTestComponent } from './components/ShadcnTestComponent';
 import { ZForm } from './components/ZForm';
 import { CustomersPage } from './pages/CustomersPage';
 import { DataTableDemo } from './components/datatable/DataTableDemo';
+import BookaCalendar from './components/calendar/BookaCalendar';
+
 
 //why hashrouter https://stackoverflow.com/questions/71984401/react-router-not-working-with-github-pages
 export const hashRouter = createHashRouter([
@@ -51,6 +53,7 @@ export const hashRouter = createHashRouter([
       { path: '/DataTableDemo', element: <DataTableDemo /> },
       //pages
       { path: '/customers', element: <CustomersPage /> },
+      { path: '/bookacalendar', element: <BookaCalendar /> },
     ],
   },
 ]);

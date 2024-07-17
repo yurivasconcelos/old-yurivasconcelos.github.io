@@ -1,14 +1,14 @@
 import { columns } from './customer-columns';
 import { DataTable } from '../../@shadcn/data-table';
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '../../@shadcn';
-import { customerService } from '../../services/services';
 import useSWR from 'swr';
+import { fetcher } from '../../services/fetcher';
 
 // import { useEffect } from 'react';
 // import useSWR from 'swr';
 
 export function CustomersDatatable() {
-  const { isLoading, data, error } = useSWR('customers', customerService.getAll(true), {
+  const { isLoading, data, error } = useSWR('customers', () => fetcher('/customers'), {
     revalidateOnFocus: false,
     revalidateOnMount: true,
     revalidateOnReconnect: true,

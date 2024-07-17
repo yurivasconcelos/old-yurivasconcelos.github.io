@@ -10,7 +10,7 @@ import {
   VisibilityState,
 } from '@tanstack/react-table';
 
-import { Button, Table, TableBody, TableCell, TableHead, TableHeader, TableRow } from './';
+import { Button, Table, TableBody, TableCell, TableHead, TableHeader, TableRow } from '.';
 
 interface DataTableProps<TData, TValue> {
   columns: ColumnDef<TData, TValue>[];

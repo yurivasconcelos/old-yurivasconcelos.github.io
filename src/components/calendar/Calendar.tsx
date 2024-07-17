@@ -8,6 +8,7 @@ import {
 } from '@fullcalendar/core' 
 import FullCalendar from '@fullcalendar/react'
 import dayGridPlugin from '@fullcalendar/daygrid'
+import listPlugin from '@fullcalendar/list'
 import timeGridPlugin from '@fullcalendar/timegrid'
 import interactionPlugin from '@fullcalendar/interaction'
 import { INITIAL_EVENTS, createEventId } from './event-utils'
@@ -59,18 +60,20 @@ export function Calendar() {
       /> */}
       <div className='demo-app-main'>
         <FullCalendar
-          plugins={[dayGridPlugin, timeGridPlugin, interactionPlugin]}
+          plugins={[dayGridPlugin, timeGridPlugin, interactionPlugin, listPlugin]}
           headerToolbar={{
             left: 'prev,next today',
             center: 'title',
-            right: 'dayGridMonth,timeGridWeek,timeGridDay'
+            right: 'dayGridMonth,timeGridWeek,timeGridDay,listWeek'
           }}
-          // height={"auto"}
+          // height={'100vh'}
+          allDaySlot={false}
           aspectRatio={1.7}
           expandRows={true}
           // defaultAllDay={false}
           
-          initialView={window.innerWidth > 1000 ? 'dayGridMonth' : 'timeGridWeek'}
+          // initialView={window.innerWidth > 1000 ? 'dayGridMonth' : 'timeGridWeek'}
+          initialView='listWeek'
           editable={true}
           selectable={true}
           selectMirror={true}

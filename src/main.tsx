@@ -10,7 +10,6 @@ import { SlackComponent } from './components/SlackComponent';
 import { LoginComponent } from './components/LoginComponent';
 import { FormsComponent } from './components/FormsComponent';
 import { MarketingCard } from './components/MarketingCard';
-import { Calendar } from './components/Calendar';
 import { Chart } from './components/Chart';
 import { TabComponent } from './components/TabComponent';
 import { GridComponent } from './components/GridComponent';
@@ -21,8 +20,7 @@ import { ShadcnTestComponent } from './components/ShadcnTestComponent';
 import { ZForm } from './components/ZForm';
 import { CustomersPage } from './pages/CustomersPage';
 import { DataTableDemo } from './components/datatable/DataTableDemo';
-import BookaCalendar from './components/calendar/BookaCalendar';
-
+import { Calendar } from './components/calendar/BookaCalendar';
 
 //why hashrouter https://stackoverflow.com/questions/71984401/react-router-not-working-with-github-pages
 export const hashRouter = createHashRouter([
@@ -53,7 +51,7 @@ export const hashRouter = createHashRouter([
       { path: '/DataTableDemo', element: <DataTableDemo /> },
       //pages
       { path: '/customers', element: <CustomersPage /> },
-      { path: '/bookacalendar', element: <BookaCalendar /> },
+   
     ],
   },
 ]);

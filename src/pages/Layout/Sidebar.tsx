@@ -1,4 +1,5 @@
 import { BarChartIcon, BellIcon, HeartIcon, MixIcon, PersonIcon, QuoteIcon, SunIcon } from '@radix-ui/react-icons';
+import { CalendarIcon } from 'lucide-react';
 import { Link } from 'react-router-dom';
 
 
@@ -11,6 +12,14 @@ export function Sidebar() {
     <>
         <div className='h-full px-3 py-4 overflow-y-auto bg-gray-50 dark:bg-gray-800'>
           <ul className='space-y-2 font-medium'>
+          <li>
+              <Link
+                to='calendar'
+                className='flex items-center p-2 text-gray-900 rounded-lg dark:text-white hover:bg-gray-100 dark:hover:bg-gray-700 group'>
+                <CalendarIcon className={iconsStyle} />
+                <span className='ms-3'>Calendar</span>
+              </Link>
+            </li>
             <li>
               <Link
                 to='chart'

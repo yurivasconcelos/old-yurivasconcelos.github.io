@@ -14,7 +14,7 @@ import { INITIAL_EVENTS, createEventId } from './event-utils'
 // import './booka-calendar.css';
 import './booka-calendar2.css';
 
-export default function BookaCalendar() {
+export function Calendar() {
   const [weekendsVisible, setWeekendsVisible] = useState<boolean>(true)
   const [currentEvents, setCurrentEvents] = useState<EventApi[]>([])
 

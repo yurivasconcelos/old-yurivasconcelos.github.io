@@ -66,9 +66,9 @@ export function Calendar() {
             center: 'title',
             right: 'dayGridMonth,timeGridWeek,timeGridDay,listWeek'
           }}
-          // height={'100vh'}
+          height={'82dvh'}
           allDaySlot={false}
-          aspectRatio={1.7}
+          aspectRatio={1.6}
           expandRows={true}
           // defaultAllDay={false}
           

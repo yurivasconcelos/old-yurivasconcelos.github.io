@@ -11,8 +11,8 @@ import dayGridPlugin from '@fullcalendar/daygrid'
 import timeGridPlugin from '@fullcalendar/timegrid'
 import interactionPlugin from '@fullcalendar/interaction'
 import { INITIAL_EVENTS, createEventId } from './event-utils'
-import './booka-calendar.css';
-// import './booka-calendar2.css';
+// import './booka-calendar.css';
+import './booka-calendar2.css';
 
 export default function BookaCalendar() {
   const [weekendsVisible, setWeekendsVisible] = useState<boolean>(true)
@@ -68,6 +68,7 @@ export default function BookaCalendar() {
           // height={"auto"}
           aspectRatio={1.7}
           expandRows={true}
+          // defaultAllDay={false}
           
           initialView={window.innerWidth > 1000 ? 'dayGridMonth' : 'timeGridWeek'}
           editable={true}

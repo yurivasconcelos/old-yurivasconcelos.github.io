@@ -379,7 +379,7 @@ export function ShadcnTestComponent() {
         variant='outline'
         type='submit'
         onClick={() => {
-          console.log('hey', toast)
+          console.log('hey', toast);
           toast('Event has been created', {
             description: 'Sunday, December 03, 2023 at 9:00 AM',
             action: {
@@ -389,6 +389,20 @@ export function ShadcnTestComponent() {
           });
         }}>
         Show Toast
+      </Button>
+
+      <Button
+        variant='outline'
+        type='submit'
+        onClick={() => {
+          console.log('hey', toast);
+          toast.custom((t) => (
+            <div className='bg-green-300 h-12'>
+              This is a custom component <button onClick={() => toast.dismiss(t)}>close</button>
+            </div>
+          ));
+        }}>
+        Show Toast Custom
       </Button>
 
       <div className='p-10 my-10 w-full bg-pink-50'>

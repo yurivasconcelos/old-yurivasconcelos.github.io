@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import { useRef, useState } from 'react';
 import {
   EventApi,
   DateSelectArg,
@@ -39,6 +39,7 @@ export function Calendar() {
   const [weekendsVisible, setWeekendsVisible] = useState<boolean>(true);
   const [currentEvents, setCurrentEvents] = useState<EventApi[]>([]);
   const [open, setOpen] = useState(false);
+  const calendarRef = useRef<FullCalendar>(null!);
 
   console.log(currentEvents, setWeekendsVisible);
   // function handleWeekendsToggle() {
@@ -48,6 +49,45 @@ export function Calendar() {
   function handleDateSelect(selectInfo: DateSelectArg) {
     console.log(selectInfo, createEventId());
     setOpen(true);
+  }
+
+  function handleEventClick(clickInfo: EventClickArg) {
+    if (confirm(`Are you sure you want to delete the event '${clickInfo.event.title}'`)) {
+      clickInfo.event.remove();
+    }
+  }
+
+  function handleEvents(events: EventApi[]) {
+    setCurrentEvents(events);
+  }
+
+  function handleSaveEvent(myevent: React.MouseEvent<HTMLButtonElement, MouseEvent>) {
+    const calendarApi = calendarRef.current.getApi();
+
+    setOpen(false);
+    const t = document.getElementById('sg-test');
+    console.log(t);
+    toast.success('Evento criado', {
+      // position: 'top-right',
+      icon: <PersonIcon />,
+      description: 'Sunday, December 03, 2023 at 9:00 AM',
+      action: {
+        label: 'OK',
+        onClick: () => console.log('Undo'),
+      },
+      richColors: true,
+      cancel: false,
+      // className:'bg-green-50'
+    });
+
+    calendarApi.addEvent({
+      id: createEventId(),
+      title: 'Seu Evento Aqui',
+      start: Date.now(),
+      end: Date.now() + 10000000,
+      color: '#FC47E4',
+    });
+    // calendarApi.scrollToTime(Date.now());
 
     // const title = prompt('Please enter a new title for your event');
     // const calendarApi = selectInfo.view.calendar;
@@ -63,28 +103,6 @@ export function Calendar() {
     //     allDay: selectInfo.allDay,
     //   });
     // }
-  }
-
-  function handleEventClick(clickInfo: EventClickArg) {
-    if (confirm(`Are you sure you want to delete the event '${clickInfo.event.title}'`)) {
-      clickInfo.event.remove();
-    }
-  }
-
-  function handleEvents(events: EventApi[]) {
-    setCurrentEvents(events);
-  }
-
-  function handleSaveEvent(myevent: React.MouseEvent<HTMLButtonElement, MouseEvent>) {
-    setOpen(false);
-    toast('Evento criado', {
-      icon: <PersonIcon />,
-      description: 'Sunday, December 03, 2023 at 9:00 AM',
-      action: {
-        label: 'OK',
-        onClick: () => console.log('Undo'),
-      },
-    });
     console.log(myevent);
   }
 
@@ -98,28 +116,31 @@ export function Calendar() {
       /> */}
         <div className='demo-app-main p-2'>
           <FullCalendar
+            locale={'pt-BR'}
             plugins={[dayGridPlugin, timeGridPlugin, interactionPlugin, listPlugin]}
             headerToolbar={{
               left: 'prev,next today',
               center: 'title',
-              right: 'dayGridMonth,timeGridWeek,timeGridDay,timeGridFourDay,listWeek',
+              right: 'dayGridMonth,timeGridWeek,timeGridDay,listWeek',
             }}
-            views={{
-              timeGridFourDay: {
-                type: 'timeGrid',
-                duration: { days: 4 },
-              },
-            }}
+            //custom views like 4 days, need to add to header tool bar.
+            // views={{
+            //   timeGridFourDay: {
+            //     type: 'timeGrid',
+            //     duration: { days: 4 },
+            //   },
+            // }}
             initialView={window.innerWidth > 1000 ? 'dayGridMonth' : 'timeGridWeek'}
+            //slot
             slotLabelInterval={{ hours: 2 }}
             slotDuration={{ minutes: 15 }}
             allDaySlot={false}
             //sizing:
-            height={'78dvh'}
+            height={'75dvh'}
+            aspectRatio={2}
             //expandRows={false}
 
             nowIndicator={true}
-            // initialView='listWeek'
             editable={true}
             selectable={true}
             selectMirror={true}
@@ -137,16 +158,17 @@ export function Calendar() {
           eventAdd={function(){}}
           eventChange={function(){}}
           eventRemove={function(){}}
-          aspectRatio={10}
+          
           
           defaultAllDay={false}
           */
+            ref={calendarRef}
           />
         </div>
       </div>
 
       <Dialog open={open} onOpenChange={setOpen}>
-        <DialogTrigger asChild/>
+        <DialogTrigger asChild />
         <DialogContent className='sm:max-w-[425px]'>
           <DialogHeader>
             <DialogTitle>Adicionar Evento</DialogTitle>
@@ -177,7 +199,7 @@ export function Calendar() {
                   <SelectValue placeholder='Escolha um membro' />
                 </SelectTrigger>
                 <SelectContent>
-                  <SelectGroup>
+                  <SelectGroup id='sg-test'>
                     <SelectLabel>Serviços</SelectLabel>
                     <SelectItem value='joao'>Joao</SelectItem>
                     <SelectItem value='Maria'>Maria</SelectItem>

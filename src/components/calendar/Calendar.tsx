@@ -117,7 +117,7 @@ export function Calendar() {
             locale={'pt-BR'}
             plugins={[dayGridPlugin, timeGridPlugin, interactionPlugin, listPlugin]}
             headerToolbar={{
-              left: 'prev,next today',
+              left: 'prev,next', //today
               center: 'title',
               right: 'dayGridMonth,timeGridWeek,timeGridDay,listWeek',
             }}
@@ -134,7 +134,7 @@ export function Calendar() {
             slotDuration={{ minutes: 15 }}
             allDaySlot={false}
             //sizing:
-            height={window.innerWidth > 1000 ? '80vh' : '75dvh'}
+            height={window.innerHeight > 950 ? '80dvh' : window.innerHeight > 700 ? '75dvh' : 'calc(100dvh - 180px)'}
             aspectRatio={2}
             //expandRows={false}
             

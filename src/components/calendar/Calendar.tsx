@@ -70,13 +70,16 @@ export function Calendar() {
             timeGridFourDay: {
               type: 'timeGrid',
               duration: { days: 4 }
+            },
+            listWeek: {
+              height: '10dhv'
             }
           }}
           initialView={window.innerWidth > 1000 ? 'dayGridMonth' : 'timeGridWeek'}
 
 
           //sizing: 
-          height={'100dvh'}
+          height={'80dvh'}
           //expandRows={false}
 
 

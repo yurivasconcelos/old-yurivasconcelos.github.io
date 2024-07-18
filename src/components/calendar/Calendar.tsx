@@ -71,15 +71,14 @@ export function Calendar() {
               type: 'timeGrid',
               duration: { days: 4 }
             },
-            listWeek: {
-              height: '10dhv'
-            }
           }}
           initialView={window.innerWidth > 1000 ? 'dayGridMonth' : 'timeGridWeek'}
-
+          slotLabelInterval={{hours: 2}}
+          slotDuration={{minutes: 15}}
+          allDaySlot={false}
 
           //sizing: 
-          height={'80dvh'}
+          height={'78dvh'}
           //expandRows={false}
 
 

@@ -80,10 +80,7 @@ export function Calendar() {
           //sizing: 
           height={'78dvh'}
           //expandRows={false}
-
-
-          allDaySlot={false}
-       
+      
           
           // initialView='listWeek'
           editable={true}

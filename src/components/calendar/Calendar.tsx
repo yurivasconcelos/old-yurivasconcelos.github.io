@@ -32,7 +32,8 @@ import {
   SelectTrigger,
   SelectValue,
 } from '../../@shadcn';
-
+import { toast } from 'sonner';
+import { PersonIcon } from '@radix-ui/react-icons';
 
 export function Calendar() {
   const [weekendsVisible, setWeekendsVisible] = useState<boolean>(true);
@@ -45,9 +46,9 @@ export function Calendar() {
   // }
 
   function handleDateSelect(selectInfo: DateSelectArg) {
-
     console.log(selectInfo, createEventId());
     setOpen(true);
+
     // const title = prompt('Please enter a new title for your event');
     // const calendarApi = selectInfo.view.calendar;
 
@@ -74,8 +75,16 @@ export function Calendar() {
     setCurrentEvents(events);
   }
 
-  function handleSaveEvent(myevent: React.MouseEvent<HTMLButtonElement, MouseEvent>)  {
+  function handleSaveEvent(myevent: React.MouseEvent<HTMLButtonElement, MouseEvent>) {
     setOpen(false);
+    toast('Evento criado', {
+      icon: <PersonIcon />,
+      description: 'Sunday, December 03, 2023 at 9:00 AM',
+      action: {
+        label: 'OK',
+        onClick: () => console.log('Undo'),
+      },
+    });
     console.log(myevent);
   }
 
@@ -135,10 +144,9 @@ export function Calendar() {
           />
         </div>
       </div>
+
       <Dialog open={open} onOpenChange={setOpen}>
-        <DialogTrigger asChild>
-          <Button variant='outline'>Edit Profile</Button>
-        </DialogTrigger>
+        <DialogTrigger asChild/>
         <DialogContent className='sm:max-w-[425px]'>
           <DialogHeader>
             <DialogTitle>Adicionar Evento</DialogTitle>

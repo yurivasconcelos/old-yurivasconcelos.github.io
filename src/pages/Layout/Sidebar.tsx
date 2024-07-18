@@ -1,4 +1,4 @@
-import { BarChartIcon, BellIcon, HeartIcon, MixIcon, PersonIcon, QuoteIcon, SunIcon } from '@radix-ui/react-icons';
+import { BarChartIcon, BellIcon, HeartIcon, MixIcon, PersonIcon, SunIcon } from '@radix-ui/react-icons';
 import { CalendarIcon } from 'lucide-react';
 import { Link } from 'react-router-dom';
 
@@ -41,10 +41,10 @@ export function Sidebar() {
             </li>
             <li>
               <Link
-                to='dialog'
+                to='shadcn'
                 className='flex items-center p-2 text-gray-900 rounded-lg dark:text-white hover:bg-gray-100 dark:hover:bg-gray-700 group'>
-                <QuoteIcon className={iconsStyle} />
-                <span className='flex-1 ms-3 whitespace-nowrap'>Dialog</span>
+                <PersonIcon className={iconsStyle} />
+                <span className='flex-1 ms-3 whitespace-nowrap'>Staff</span>
                 <span className='inline-flex items-center justify-center w-3 h-3 p-3 ms-3 text-sm font-medium text-blue-800 bg-blue-100 rounded-full dark:bg-blue-900 dark:text-blue-300'>
                   3
                 </span>

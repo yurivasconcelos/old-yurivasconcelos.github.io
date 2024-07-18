@@ -3,7 +3,7 @@ import Navbar from './pages/Layout/Navbar';
 import { Sidebar } from './pages/Layout/Sidebar';
 import { Bottom } from './pages/Layout/Bottom';
 import { useLocation } from 'react-router-dom';
-import { TooltipProvider, Toaster } from './@shadcn';
+import { TooltipProvider } from './@shadcn';
 
 function App() {
   const location = useLocation();
@@ -12,7 +12,7 @@ function App() {
   return (
     <>
       <TooltipProvider>
-        <Toaster />
+
         <div className='flex flex-col h-screen'>
           <Navbar />
           {!(location.pathname === '/bookacalendar') ? (

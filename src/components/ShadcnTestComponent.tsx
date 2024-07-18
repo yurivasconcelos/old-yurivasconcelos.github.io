@@ -50,7 +50,17 @@ import {
   MenubarShortcut,
   MenubarSeparator,
 } from '../@shadcn/menubar';
-import { AlertDialogHeader, AlertDialogFooter, AlertDialog, AlertDialogTrigger, AlertDialogContent, AlertDialogTitle, AlertDialogDescription, AlertDialogCancel, AlertDialogAction } from '../@shadcn';
+import {
+  AlertDialogHeader,
+  AlertDialogFooter,
+  AlertDialog,
+  AlertDialogTrigger,
+  AlertDialogContent,
+  AlertDialogTitle,
+  AlertDialogDescription,
+  AlertDialogCancel,
+  AlertDialogAction,
+} from '../@shadcn';
 
 export function ShadcnTestComponent() {
   return (
@@ -96,8 +106,6 @@ export function ShadcnTestComponent() {
           </div>
         </PopoverContent>
       </Popover>
-
-     
 
       <Popover>
         <PopoverTrigger asChild>
@@ -369,15 +377,17 @@ export function ShadcnTestComponent() {
 
       <Button
         variant='outline'
-        onClick={() =>
+        type='submit'
+        onClick={() => {
+          console.log('hey', toast)
           toast('Event has been created', {
             description: 'Sunday, December 03, 2023 at 9:00 AM',
             action: {
               label: 'Undo',
               onClick: () => console.log('Undo'),
             },
-          })
-        }>
+          });
+        }}>
         Show Toast
       </Button>
 

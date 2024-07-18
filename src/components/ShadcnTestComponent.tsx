@@ -41,7 +41,16 @@ import { Table, TableCaption, TableHeader, TableRow, TableHead, TableBody, Table
 import { IconJarLogoIcon } from '@radix-ui/react-icons';
 import { Skeleton } from '../@shadcn/skeleton';
 import { ScrollArea } from '../@shadcn/scroll-area';
-import { Menubar, MenubarMenu, MenubarTrigger, MenubarContent, MenubarItem, MenubarShortcut, MenubarSeparator } from '../@shadcn/menubar';
+import {
+  Menubar,
+  MenubarMenu,
+  MenubarTrigger,
+  MenubarContent,
+  MenubarItem,
+  MenubarShortcut,
+  MenubarSeparator,
+} from '../@shadcn/menubar';
+import { AlertDialogHeader, AlertDialogFooter, AlertDialog, AlertDialogTrigger, AlertDialogContent, AlertDialogTitle, AlertDialogDescription, AlertDialogCancel, AlertDialogAction } from '../@shadcn';
 
 export function ShadcnTestComponent() {
   return (
@@ -87,6 +96,89 @@ export function ShadcnTestComponent() {
           </div>
         </PopoverContent>
       </Popover>
+
+     
+
+      <Popover>
+        <PopoverTrigger asChild>
+          <Button variant='outline'>Open popover</Button>
+        </PopoverTrigger>
+        <PopoverContent className='w-80'>
+          <div className='grid gap-4'>
+            <div className='space-y-2'>
+              <h4 className='font-medium leading-none'>Adicionar novo evento</h4>
+
+              {/* <p className='text-sm text-muted-foreground'>Set the dimensions for the layer.</p> */}
+            </div>
+            <div className='grid gap-2'>
+              <div className='grid grid-cols-3 items-center gap-4'>
+                <Label htmlFor='servico'>Serviço</Label>
+                <Select>
+                  <SelectTrigger className='w-[180px]'>
+                    <SelectValue placeholder='Escolha um serviço' />
+                  </SelectTrigger>
+                  <SelectContent>
+                    <SelectGroup>
+                      <SelectLabel>Serviços</SelectLabel>
+                      <SelectItem value='unha'>Unha</SelectItem>
+                      <SelectItem value='cabelo'>Cabelo</SelectItem>
+                      <SelectItem value='sombrancelha'>Sombrancelha</SelectItem>
+                      <SelectItem value='tatuagem'>Tatuagem</SelectItem>
+                    </SelectGroup>
+                  </SelectContent>
+                </Select>
+              </div>
+              <div className='grid grid-cols-3 items-center gap-4'>
+                <Label htmlFor='maxWidth'>Staff</Label>
+                <Select>
+                  <SelectTrigger className='w-[180px]'>
+                    <SelectValue placeholder='Escolha um membro' />
+                  </SelectTrigger>
+                  <SelectContent>
+                    <SelectGroup>
+                      <SelectLabel>Serviços</SelectLabel>
+                      <SelectItem value='joao'>Joao</SelectItem>
+                      <SelectItem value='Maria'>Maria</SelectItem>
+                    </SelectGroup>
+                  </SelectContent>
+                </Select>
+              </div>
+
+              {/* default how it was before
+               <div className='grid grid-cols-3 items-center gap-4'>
+                <Label htmlFor='maxWidth'>Staff</Label>
+                <Input id='maxWidth' defaultValue='300px' className='col-span-2 h-8' />
+              </div> */}
+              <div className='grid grid-cols-3 items-center gap-4'>
+                <Label htmlFor='height'>Preço</Label>
+
+                <Input id='price' defaultValue='R$80,00' className='col-span-2 h-8' />
+              </div>
+
+              <Button className='mt-4 h-8'>Salvar</Button>
+            </div>
+          </div>
+        </PopoverContent>
+      </Popover>
+
+      <AlertDialog>
+        <AlertDialogTrigger asChild>
+          <Button variant='outline'>Show Dialog</Button>
+        </AlertDialogTrigger>
+        <AlertDialogContent>
+          <AlertDialogHeader>
+            <AlertDialogTitle>Are you absolutely sure?</AlertDialogTitle>
+            <AlertDialogDescription>
+              This action cannot be undone. This will permanently delete your account and remove your data from our
+              servers.
+            </AlertDialogDescription>
+          </AlertDialogHeader>
+          <AlertDialogFooter>
+            <AlertDialogCancel>Cancel</AlertDialogCancel>
+            <AlertDialogAction>Continue</AlertDialogAction>
+          </AlertDialogFooter>
+        </AlertDialogContent>
+      </AlertDialog>
 
       <div className='w-72 h-72'>
         <ResizablePanelGroup direction='horizontal' className='max-w-sm max-h-24 rounded-lg border'>

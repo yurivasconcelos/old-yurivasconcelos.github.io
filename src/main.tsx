@@ -3,7 +3,6 @@ import ReactDOM from 'react-dom/client';
 import App from './App';
 import './index.css';
 import { createHashRouter, RouterProvider } from 'react-router-dom';
-import { AlertDialogDemo } from './components/AlertDialogComponent';
 import { TestComponent } from './components/TestComponent';
 import { CardComponent } from './components/CardComponent';
 import { SlackComponent } from './components/SlackComponent';
@@ -31,7 +30,6 @@ export const hashRouter = createHashRouter([
       { path: '/', element: <LoginComponent /> },
 
       //tests
-      { path: '/dialog', element: <AlertDialogDemo /> },
       { path: '/test', element: <TestComponent /> },
       { path: '/card', element: <CardComponent /> },
       { path: '/test/:id', element: <TestComponent /> },

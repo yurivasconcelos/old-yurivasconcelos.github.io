@@ -58,22 +58,32 @@ export function Calendar() {
         handleWeekendsToggle={handleWeekendsToggle}
         currentEvents={currentEvents}
       /> */}
-      <div className='demo-app-main'>
+      <div className='demo-app-main p-2'>
         <FullCalendar
           plugins={[dayGridPlugin, timeGridPlugin, interactionPlugin, listPlugin]}
           headerToolbar={{
             left: 'prev,next today',
             center: 'title',
-            right: 'dayGridMonth,timeGridWeek,timeGridDay,listWeek'
+            right: 'dayGridMonth,timeGridWeek,timeGridDay,timeGridFourDay,listWeek'
           }}
-          height={'82dvh'}
+          views={{
+            timeGridFourDay: {
+              type: 'timeGrid',
+              duration: { days: 4 }
+            }
+          }}
+          initialView={window.innerWidth > 1000 ? 'dayGridMonth' : 'timeGridWeek'}
+
+
+          //sizing: 
+          height={'100dvh'}
+          //expandRows={false}
+
+
           allDaySlot={false}
-          aspectRatio={1.6}
-          expandRows={true}
-          // defaultAllDay={false}
+       
           
-          // initialView={window.innerWidth > 1000 ? 'dayGridMonth' : 'timeGridWeek'}
-          initialView='listWeek'
+          // initialView='listWeek'
           editable={true}
           selectable={true}
           selectMirror={true}
@@ -88,6 +98,9 @@ export function Calendar() {
           eventAdd={function(){}}
           eventChange={function(){}}
           eventRemove={function(){}}
+          aspectRatio={10}
+          
+          defaultAllDay={false}
           */
         />
       </div>

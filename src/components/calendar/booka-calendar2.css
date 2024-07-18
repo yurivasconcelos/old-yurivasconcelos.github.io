@@ -1,5 +1,5 @@
 :root {
-  --fc-small-font-size: .85em;
+  --fc-small-font-size: 0.85em;
   --fc-page-bg-color: #fff;
   --fc-neutral-bg-color: rgba(208, 208, 208, 0.3);
   --fc-neutral-text-color: #f57373;
@@ -7,7 +7,7 @@
 
   --fc-button-text-color: #fff;
   --fc-button-bg-color: #1a5897;
-  --fc-button-border-color: #2C3E50;
+  --fc-button-border-color: #2c3e50;
   --fc-button-hover-bg-color: #1e2b37;
   --fc-button-hover-border-color: #1a252f;
   --fc-button-active-bg-color: #267dcf;
@@ -44,12 +44,15 @@
   -webkit-user-select: none;
 }
 
-
 .fc table,
 html .fc {
   font-size: 0.6rem;
 }
 
 .fc .fc-scrollgrid {
-  border-radius: 0.7rem;
+  border-radius: 0.47rem;
+}
+
+.fc-scroller calendar-scroll-shadow--right {
+  overflow: hidden !important;
 }

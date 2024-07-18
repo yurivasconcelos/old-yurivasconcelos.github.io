@@ -137,6 +137,11 @@ export function Calendar() {
             height={window.innerWidth > 1000 ? '80vh' : '75dvh'}
             aspectRatio={2}
             //expandRows={false}
+            
+            //mobile support https://fullcalendar.io/docs/longPressDelay
+            longPressDelay={300}
+            selectLongPressDelay={300}
+            eventLongPressDelay={300}
 
             nowIndicator={true}
             editable={true}

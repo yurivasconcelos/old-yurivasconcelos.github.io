@@ -73,14 +73,19 @@ export function Calendar() {
             }
           }}
           initialView={window.innerWidth > 1000 ? 'dayGridMonth' : 'timeGridWeek'}
-
+          slotLabelInterval={{hours: 2}}
+          slotDuration={{minutes: 15}}
+          allDaySlot={false}
 
           //sizing: 
           height={'100dvh'}
-          //expandRows={false}
+          expandRows={false}
+          // aspectRatio={2.5}
+
+          //headers
 
 
-          allDaySlot={false}
+
        
           
           // initialView='listWeek'
@@ -111,8 +116,8 @@ export function Calendar() {
 function renderEventContent(eventInfo: EventContentArg) {
   return (
     <>
-      <b>{eventInfo.timeText}</b>
       <i>{eventInfo.event.title}</i>
+      <b className='bold'>: {eventInfo.timeText}</b>
     </>
   )
 }

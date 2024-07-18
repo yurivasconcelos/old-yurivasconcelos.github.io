@@ -52,9 +52,7 @@ export function Calendar() {
   }
 
   function handleEventClick(clickInfo: EventClickArg) {
-    if (confirm(`Are you sure you want to delete the event '${clickInfo.event.title}'`)) {
-      clickInfo.event.remove();
-    }
+    toast.info(`You clicked here ${clickInfo.event.title}`)
   }
 
   function handleEvents(events: EventApi[]) {
@@ -136,7 +134,7 @@ export function Calendar() {
             slotDuration={{ minutes: 15 }}
             allDaySlot={false}
             //sizing:
-            height={'75dvh'}
+            height={window.innerWidth > 1000 ? '80vh' : '75dvh'}
             aspectRatio={2}
             //expandRows={false}
 
